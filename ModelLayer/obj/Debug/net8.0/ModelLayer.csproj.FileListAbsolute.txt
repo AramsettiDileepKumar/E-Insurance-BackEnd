@@ -1,0 +1,12 @@
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\bin\Debug\net8.0\ModelLayer.deps.json
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\bin\Debug\net8.0\ModelLayer.dll
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\bin\Debug\net8.0\ModelLayer.pdb
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.csproj.AssemblyReference.cache
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.AssemblyInfoInputs.cache
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.AssemblyInfo.cs
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.dll
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\refint\ModelLayer.dll
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ModelLayer.pdb
+C:\Users\dilee\source\repos\E-Insurance\ModelLayer\obj\Debug\net8.0\ref\ModelLayer.dll

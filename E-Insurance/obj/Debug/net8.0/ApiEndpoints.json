@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "Method": "AddAgent",
+    "RelativePath": "api/Registration/AddAgent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.AgentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "Method": "AddCustomers",
+    "RelativePath": "api/Registration/AddCustomers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.CustomerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "Method": "AddEmployee",
+    "RelativePath": "api/Registration/AddEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "Method": "AdminRegistration",
+    "RelativePath": "api/Registration/AdminRegistration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "Method": "Login",
+    "RelativePath": "api/Registration/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLogin",
+        "Type": "ModelLayer.RequestDTO.UserLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
