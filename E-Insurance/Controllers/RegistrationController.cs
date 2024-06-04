@@ -40,7 +40,7 @@ namespace E_Insurance.Controllers
             }
         }
         [HttpPost("AddAgent")]
-        public async Task<IActionResult> AddAgent(AgentRequest request)
+        public async Task<IActionResult> AddAgent(UserRequest request)
         {
             try
             {

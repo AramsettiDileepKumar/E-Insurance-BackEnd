@@ -74,3 +74,8 @@ C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\RepositoryL
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\ModelLayer.pdb
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\obj\Debug\net8.0\E-Insurance.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\obj\Debug\net8.0\E-Insurance.sourcelink.json
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MailKit.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MimeKit.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\System.Net.Mail.Abstractions.dll

@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.AgentRequest",
+        "Type": "ModelLayer.RequestDTO.UserRequest",
         "IsRequired": true
       }
     ],

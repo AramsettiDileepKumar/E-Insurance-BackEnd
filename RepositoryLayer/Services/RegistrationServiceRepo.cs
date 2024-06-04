@@ -2,6 +2,7 @@
 using Dapper;
 using Microsoft.Data.SqlClient;
 using ModelLayer.Entities;
+using ModelLayer.MailSender;
 using ModelLayer.RequestDTO;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
@@ -31,13 +32,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password",request.Password);
                 parameters.Add("Role", request.Role);
-                parameters.Add("UserId", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin",parameters);
-                var userId = parameters.Get<int>("UserId");
-                var paramtrs=new DynamicParameters();   
-                paramtrs.Add("UserId",userId);
-                paramtrs.Add("FullName",request.FullName);
-                return await context.CreateConnection().ExecuteAsync("SP_AddAdmin",paramtrs) > 0; 
+               return await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin", parameters) > 0;
             }
             catch (Exception ex) 
             {
@@ -46,19 +41,14 @@ namespace RepositoryLayer.Services
         }
         public async Task<bool> AddEmployee(UserEntity request)
         {
-            try {
+            try
+            {
                 var parameters = new DynamicParameters();
                 parameters.Add("FullName", request.FullName);
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
-                parameters.Add("UserId", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin", parameters);
-                var userId = parameters.Get<int>("UserId");
-                var paramtrs = new DynamicParameters();
-                paramtrs.Add("UserId", userId);
-                paramtrs.Add("FullName", request.FullName);
-                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", paramtrs) > 0;
+               return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) > 0;
             }
             catch (Exception ex) { throw new Exception(ex.StackTrace); }
         }
@@ -71,14 +61,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
-                parameters.Add("UserId", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin", parameters);
-                var userId = parameters.Get<int>("UserId");
-                var paramtrs = new DynamicParameters();
-                paramtrs.Add("UserId", userId);
-                paramtrs.Add("FullName", request.FullName);
-                paramtrs.Add("AgentCommissionRate",request.AgentCommissionRate);    
-                return await context.CreateConnection().ExecuteAsync("SP_AddAgent", paramtrs) > 0;
+                return await context.CreateConnection().ExecuteAsync("SP_AddAgent", parameters) > 0;
             }
             catch (Exception ex) { throw new Exception(ex.StackTrace); }
         }
@@ -91,16 +74,11 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
-                parameters.Add("UserId", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin", parameters);
-                var userId = parameters.Get<int>("UserId");
-                var paramtrs = new DynamicParameters();
-                paramtrs.Add("UserId", userId);
-                paramtrs.Add("FullName", request.FullName);
-                paramtrs.Add("Age", request.age);
-                paramtrs.Add("PhoneNumber",request.PhoneNumber);
-                paramtrs.Add("Address",request.Address);
-                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", paramtrs) > 0;
+                parameters.Add("Age", request.Age);
+                parameters.Add("PhoneNumber", request.PhoneNumber);
+                parameters.Add("Address", request.Address);
+                parameters.Add("AgentId", request.AgentId);
+                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) > 0;
             }
             catch (Exception ex) { throw new Exception(ex.StackTrace); }
         }
@@ -108,9 +86,14 @@ namespace RepositoryLayer.Services
         {
             try
             {
+                string storedProcedure ;
                 var parameters = new DynamicParameters();
                 parameters.Add("@Email", userLogin.EmailId);
-                var user = await context.CreateConnection().QueryFirstOrDefaultAsync<UserEntity>("login_sp", parameters);
+                if (userLogin.Role == "Admin"){ storedProcedure = "AdminLogin_sp"; }
+                else if(userLogin.Role == "Employee") { storedProcedure = "EmployeeLogin_SP"; }
+                else if( userLogin.Role == "Agent") { storedProcedure = "AgentLogin_SP"; }
+                else { storedProcedure = "CustomerLogin_SP"; }           
+                var user = await context.CreateConnection().QueryFirstOrDefaultAsync<UserEntity>(storedProcedure, parameters);
                 if (user == null)
                 {
                     throw new Exception($"User with email '{userLogin.EmailId}' not found.");

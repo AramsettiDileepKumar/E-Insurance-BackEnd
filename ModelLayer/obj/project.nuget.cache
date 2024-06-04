@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "1cULn8x0CifDGs27GtuxuNoXim7HfjCHIjio3sh9JoReQEvXpJYHI/3d/ZBvJKKAiLWOD4ha3jhZVgRwQd9+rQ==",
+  "dgSpecHash": "UcdXbSKmBRheB4e/NmzVkbpi3RSaqT3z85qSKAfUVTlmNwbHK1G4bf0vVTyhi9Zg61PwCD9OtkJumNWXw5cPxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dilee\\source\\repos\\E-Insurance\\ModelLayer\\ModelLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dilee\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512"
+    "C:\\Users\\dilee\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\mailkit\\4.4.0\\mailkit.4.4.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\mimekit\\4.4.0\\mimekit.4.4.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\system.net.mail.abstractions\\1.1.21\\system.net.mail.abstractions.1.1.21.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512",
+    "C:\\Users\\dilee\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

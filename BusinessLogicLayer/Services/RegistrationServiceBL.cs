@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ModelLayer.Entities;
+using ModelLayer.MailSender;
 using ModelLayer.RequestDTO;
 using RepositoryLayer.Interfaces;
 using System;
@@ -19,6 +20,7 @@ namespace BusinessLogicLayer.Services
     {
         private readonly IRegistrationRepo repo;
         private readonly IConfiguration _configuration;
+
         public RegistrationServiceBL(IRegistrationRepo repo, IConfiguration configuration)
         {
             this.repo = repo;
@@ -39,7 +41,12 @@ namespace BusinessLogicLayer.Services
                     Password = Encrypt(request.Password),
                     Role = request.Role,
                 };
-                return await repo.AdminRegistration(userEntity);
+                 if(await repo.AdminRegistration(userEntity))
+                 {
+                    EmailSender.sendMail(request.EmailId, request.Password);
+                    return true;
+                 }
+                return false;
             }
             catch (Exception ex) 
             { 
@@ -61,14 +68,19 @@ namespace BusinessLogicLayer.Services
                     Password = Encrypt(request.Password),
                     Role = request.Role,
                 };
-                return await repo.AddEmployee(userEntity);
+                 if(await repo.AddEmployee(userEntity))
+                {
+                    EmailSender.sendMail(request.EmailId, request.Password);
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<bool> AddAgent(AgentRequest request)
+        public async Task<bool> AddAgent(UserRequest request)
         {
             try
             {
@@ -82,9 +94,13 @@ namespace BusinessLogicLayer.Services
                     EmailId = request.EmailId,
                     Password = Encrypt(request.Password),
                     Role = request.Role,
-                    AgentCommissionRate= request.AgentCommissionRate, 
                 };
-                return await repo.AddAgent(userEntity);
+                if( await repo.AddAgent(userEntity))
+                {
+                    EmailSender.sendMail(request.EmailId, request.Password);
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
@@ -105,11 +121,18 @@ namespace BusinessLogicLayer.Services
                     EmailId = request.EmailId,
                     Password = Encrypt(request.Password),
                     Role = request.Role,
-                    age=request.Age,
+                    Age=request.Age,
                     PhoneNumber = request.PhoneNumber,
                     Address= request.Address,
+                    AgentId = request.AgentId,
                 };
-                return await repo.AddCustomer(userEntity);
+
+                if(await repo.AddCustomer(userEntity))
+                {
+                    EmailSender.sendMail(request.EmailId, request.Password);
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {

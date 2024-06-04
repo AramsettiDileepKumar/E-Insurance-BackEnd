@@ -73,7 +73,9 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-/////////
+/////////Nlog
+
+/////////////////////
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
