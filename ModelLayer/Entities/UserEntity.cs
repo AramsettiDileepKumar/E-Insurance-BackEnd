@@ -13,9 +13,9 @@ namespace ModelLayer.Entities
         public string? EmailId { get; set; }
         public string? Password { get; set; }
         public string? Role { get; set; }
-        public int age { get; set; }
+        public int Age { get; set; }
         public string? Address {  get; set; }
         public long PhoneNumber {  get; set; }
-        public double AgentCommissionRate { get; set; }
+        public  int AgentId {  get; set; }
     }
 }
