@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelLayer.RequestDTO
+namespace ModelLayer.RequestDTO.Registration
 {
     public class CustomerRequest
     {
@@ -14,7 +14,6 @@ namespace ModelLayer.RequestDTO
         public int Age { get; set; }
         public long PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public int AgentId { get; set; }
         public string? Role { get; set; }
     }
 }

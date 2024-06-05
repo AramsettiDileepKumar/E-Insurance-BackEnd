@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ModelLayer.Entities;
 using ModelLayer.MailSender;
-using ModelLayer.RequestDTO;
+using ModelLayer.RequestDTO.Registration;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -124,7 +124,6 @@ namespace BusinessLogicLayer.Services
                     Age=request.Age,
                     PhoneNumber = request.PhoneNumber,
                     Address= request.Address,
-                    AgentId = request.AgentId,
                 };
 
                 if(await repo.AddCustomer(userEntity))

@@ -1,5 +1,5 @@
 ﻿using ModelLayer.Entities;
-using ModelLayer.RequestDTO;
+using ModelLayer.RequestDTO.Registration;
 using System;
 using System.Collections.Generic;
 using System.Linq;

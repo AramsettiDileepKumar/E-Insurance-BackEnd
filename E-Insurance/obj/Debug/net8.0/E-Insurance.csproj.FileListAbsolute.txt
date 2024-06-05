@@ -79,3 +79,12 @@ C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\BouncyCastl
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MailKit.dll
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MimeKit.dll
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\System.Net.Mail.Abstractions.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MassTransit.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.Extensions.Logging.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.Web.AspNetCore.dll
