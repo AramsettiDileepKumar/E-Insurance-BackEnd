@@ -33,5 +33,10 @@ namespace E_Insurance.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        //[HttpGet]
+        //public async Task<IActionResult> ViewPolicies()
+        //{
+
+        //}
     }
 }
