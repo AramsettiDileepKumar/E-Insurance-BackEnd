@@ -80,7 +80,7 @@ namespace BusinessLogicLayer.Services
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<bool> AddAgent(UserRequest request)
+        public async Task<bool> AddAgent(AgentRequest request)
         {
             try
             {
@@ -93,6 +93,7 @@ namespace BusinessLogicLayer.Services
                     FullName = request.FullName,
                     EmailId = request.EmailId,
                     Password = Encrypt(request.Password),
+                    Location = request.Location,
                     Role = request.Role,
                 };
                 if( await repo.AddAgent(userEntity))
@@ -107,7 +108,7 @@ namespace BusinessLogicLayer.Services
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<bool> AddCustomer(CustomerRequest request)
+        public async Task<bool> AddCustomer(UserRequest request)
         {
             try
             {
@@ -121,9 +122,6 @@ namespace BusinessLogicLayer.Services
                     EmailId = request.EmailId,
                     Password = Encrypt(request.Password),
                     Role = request.Role,
-                    Age=request.Age,
-                    PhoneNumber = request.PhoneNumber,
-                    Address= request.Address,
                 };
 
                 if(await repo.AddCustomer(userEntity))
@@ -142,6 +140,7 @@ namespace BusinessLogicLayer.Services
         public async Task<string> Login(UserLoginRequest userLogin)
         {
             var user= await repo.Login(userLogin);
+
             if (Encrypt(userLogin.Password).Equals(user.Password))
             {
                 return GenerateJwtToken(user);
@@ -157,7 +156,9 @@ namespace BusinessLogicLayer.Services
             return Convert.ToBase64String(refer);
         }
         public string GenerateJwtToken(UserEntity user)
-        { 
+        {
+          
+
             string jwtSecret = _configuration["JwtSettings:Secret"];
             if (string.IsNullOrEmpty(jwtSecret))
             {
@@ -173,6 +174,7 @@ namespace BusinessLogicLayer.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
+  
             new Claim(ClaimTypes.Role,user.Role),
             new Claim(ClaimTypes.NameIdentifier,user.Id.ToString())
 

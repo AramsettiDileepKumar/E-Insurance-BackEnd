@@ -10,6 +10,9 @@ namespace RepositoryLayer.Interfaces
 {
     public interface IPurchaseRepo
     {
-        Task<bool> purchasePolicy(PurchaseEntity request);
+        Task<bool> purchasePolicy(purchaseRequest request);
+        Task<IEnumerable<PolicyEntity>> ViewPolicies(int CustomerId);
+        Task<decimal> CalculatePremium(int PolicyId, int age);
+        Task<int> AddPremiumRate(PremiumRates premiumRate);
     }
 }

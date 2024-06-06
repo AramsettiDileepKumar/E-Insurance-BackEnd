@@ -9,10 +9,10 @@ namespace BusinessLogicLayer.Interfaces
 {
     public interface IRegistrationBL
     {
-       public Task<bool> AdminRegistration(UserRequest user);
-       public Task<bool> AddEmployee(UserRequest request);
-       public Task<bool> AddAgent(UserRequest request);
-       public Task<bool> AddCustomer(CustomerRequest request);
-       public Task<string> Login(UserLoginRequest user);
+        public Task<bool> AdminRegistration(UserRequest user);
+        public Task<bool> AddEmployee(UserRequest request);
+        public Task<bool> AddAgent(AgentRequest request);
+        public Task<bool> AddCustomer(UserRequest request);
+        public Task<string> Login(UserLoginRequest user);
     }
 }

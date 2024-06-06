@@ -42,6 +42,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "ViewPolicies",
+    "RelativePath": "api/purchase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "AddPremiumRate",
+    "RelativePath": "api/purchase/addPremiumRate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "premiumRate",
+        "Type": "ModelLayer.Entities.PremiumRates",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "CalculatePremium",
+    "RelativePath": "api/purchase/CalculatePremium",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "policyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "age",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "E_Insurance.Controllers.registrationController",
     "Method": "AdminRegistration",
     "RelativePath": "api/registration/admin",
@@ -67,7 +114,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.Registration.UserRequest",
+        "Type": "ModelLayer.RequestDTO.Registration.AgentRequest",
         "IsRequired": true
       }
     ],
@@ -83,7 +130,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.Registration.CustomerRequest",
+        "Type": "ModelLayer.RequestDTO.Registration.UserRequest",
         "IsRequired": true
       }
     ],

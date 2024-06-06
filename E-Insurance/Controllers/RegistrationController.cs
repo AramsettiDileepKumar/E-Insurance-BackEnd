@@ -49,7 +49,7 @@ namespace E_Insurance.Controllers
             }
         }
         [HttpPost("agent")]
-        public async Task<IActionResult> AddAgent(UserRequest request)
+        public async Task<IActionResult> AddAgent(AgentRequest request)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace E_Insurance.Controllers
             }
         }
         [HttpPost("customers")]
-        public async Task<IActionResult> AddCustomers(CustomerRequest request)
+        public async Task<IActionResult> AddCustomers(UserRequest request)
         {
             try
             {

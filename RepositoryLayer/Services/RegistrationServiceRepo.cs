@@ -37,7 +37,7 @@ namespace RepositoryLayer.Services
                 _logger.Info("Admin Registration Executed");
                 using (var connection = context.CreateConnection())
                 {
-                    return await connection.ExecuteAsync("SP_RegisterAdmin", parameters) > 0;
+                    return await connection.ExecuteAsync("SP_RegisterAdmin", parameters) < 0;
                 }
             }
             catch (Exception ex) 
@@ -56,7 +56,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
                 _logger.Info("Employee Registration Executed");
-                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) > 0;
+                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) < 0;
             }
             catch (Exception ex)
             {
@@ -71,9 +71,11 @@ namespace RepositoryLayer.Services
                 parameters.Add("FullName", request.FullName);
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
+                parameters.Add("Location", request.Location);
                 parameters.Add("Role", request.Role);
                 _logger.Info("Agent Registration Executed");
-                return await context.CreateConnection().ExecuteAsync("SP_AddAgent", parameters) > 0;
+                var result= await context.CreateConnection().ExecuteAsync("SP_AddAgent", parameters);
+                return result < 0;
             }
             catch (Exception ex)
             {
@@ -89,11 +91,8 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
-                parameters.Add("Age", request.Age);
-                parameters.Add("PhoneNumber", request.PhoneNumber);
-                parameters.Add("Address", request.Address);
                 _logger.Info("Customer Registration Executed");
-                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) > 0;
+                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) < 0;
             }
             catch (Exception ex)
             {
@@ -110,7 +109,8 @@ namespace RepositoryLayer.Services
                 if (userLogin.Role == "Admin"){ storedProcedure = "AdminLogin_sp"; }
                 else if(userLogin.Role == "Employee") { storedProcedure = "EmployeeLogin_SP"; }
                 else if( userLogin.Role == "Agent") { storedProcedure = "AgentLogin_SP"; }
-                else { storedProcedure = "CustomerLogin_SP"; }           
+                else if(userLogin.Role == "Customer") { storedProcedure = "CustomerLogin_SP"; }
+                else { storedProcedure = null; }
                 var user = await context.CreateConnection().QueryFirstOrDefaultAsync<UserEntity>(storedProcedure, parameters);
                 if (user == null)
                 {
