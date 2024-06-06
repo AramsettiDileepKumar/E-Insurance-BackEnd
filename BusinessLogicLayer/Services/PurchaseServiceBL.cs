@@ -21,19 +21,36 @@ namespace BusinessLogicLayer.Services
         {
             try
             {
-                PurchaseEntity entity = new PurchaseEntity
-                {
-                    CustomerId = request.CustomerId,
-                    AgentId = request.AgentId,
-                    PolicyId = request.PolicyId,
-                    PurchaseDate=DateTime.Now,  
-                };
-                return await purchase.purchasePolicy(entity);
+                return await purchase.purchasePolicy(request);
             }
             catch(Exception ex) 
             {
                 throw new Exception(ex.Message);
             }
+        }
+        public async Task<IEnumerable<PolicyEntity>> ViewPolicies(int CustomerId)
+        {
+            try
+            {
+                return await purchase.ViewPolicies(CustomerId);
+            }
+            catch(Exception ex) { throw new Exception(ex.Message); }
+        }
+        public async Task<decimal> CalculatePremium(int PolicyId, int age)
+        {
+            try
+            {
+                return await purchase.CalculatePremium(PolicyId, age);
+            }
+            catch(Exception ex) { throw new Exception(ex.Message); }
+        }
+        public async Task<int> AddPremiumRate(PremiumRates premiumRate)
+        {
+            try
+            {
+               return await purchase.AddPremiumRate(premiumRate);
+            }
+            catch(Exception ex) { throw new Exception(ex.Message); }
         }
     }
 }
