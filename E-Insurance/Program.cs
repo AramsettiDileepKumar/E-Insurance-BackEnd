@@ -1,8 +1,10 @@
 using BusinessLogicLayer.Interfaces;
 using BusinessLogicLayer.Services;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NLog.Web;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
 using RepositoryLayer.Services;
@@ -14,6 +16,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<IRegistrationBL,RegistrationServiceBL>();
 builder.Services.AddScoped<IRegistrationRepo, RegistrationServiceRepo>();
+builder.Services.AddScoped<IPolicyBL, PolicyServiceBL>();
+builder.Services.AddScoped<IPolicyRepo, PolicyServiceRepo>();
+builder.Services.AddScoped<IPurchaseBL,PurchaseServiceBL>();
+builder.Services.AddScoped<IPurchaseRepo,PurchaseServiceRepo>();
 //---JWT
 // Get the secret key from the configuration
 var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtSettings:Secret"]);
@@ -74,8 +80,29 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 /////////Nlog
+var logpath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+NLog.GlobalDiagnosticsContext.Set("LogDirectory", logpath);
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(LogLevel.Trace);
+builder.Host.UseNLog();
+builder.Services.AddSingleton<NLog.ILogger>(NLog.LogManager.GetCurrentClassLogger());
 
-/////////////////////
+
+/////////////////////RabbitMQ
+//builder.Services.AddMassTransit(x =>
+//{
+//    x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+//    {
+//        config.UseHealthCheck(provider);
+//        config.Host(new Uri("rabbitmq://localhost"), h =>
+//        {
+//            h.Username("guest");
+//            h.Password("guest");
+//        });
+//    }));
+//});
+//builder.Services.AddMassTransitHostedService();
+//////
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

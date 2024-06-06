@@ -1,79 +1,121 @@
 [
   {
-    "ContainingType": "E_Insurance.Controllers.RegistrationController",
-    "Method": "AddAgent",
-    "RelativePath": "api/Registration/AddAgent",
+    "ContainingType": "E_Insurance.Controllers.PoliciesController",
+    "Method": "AddPolicy",
+    "RelativePath": "api/Policies",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.UserRequest",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.PolicyRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_Insurance.Controllers.RegistrationController",
-    "Method": "AddCustomers",
-    "RelativePath": "api/Registration/AddCustomers",
+    "ContainingType": "E_Insurance.Controllers.PoliciesController",
+    "Method": "getAllPolicies",
+    "RelativePath": "api/Policies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "PurchasePolicy",
+    "RelativePath": "api/purchase",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.CustomerRequest",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.purchaseRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_Insurance.Controllers.RegistrationController",
-    "Method": "AddEmployee",
-    "RelativePath": "api/Registration/AddEmployee",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ModelLayer.RequestDTO.UserRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "ContainingType": "E_Insurance.Controllers.registrationController",
     "Method": "AdminRegistration",
-    "RelativePath": "api/Registration/AdminRegistration",
+    "RelativePath": "api/registration/admin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "ModelLayer.RequestDTO.UserRequest",
+        "Type": "ModelLayer.RequestDTO.Registration.UserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_Insurance.Controllers.RegistrationController",
+    "ContainingType": "E_Insurance.Controllers.registrationController",
+    "Method": "AddAgent",
+    "RelativePath": "api/registration/agent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.Registration.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.registrationController",
+    "Method": "AddCustomers",
+    "RelativePath": "api/registration/customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.Registration.CustomerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.registrationController",
+    "Method": "AddEmployee",
+    "RelativePath": "api/registration/employee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.Registration.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.registrationController",
     "Method": "Login",
-    "RelativePath": "api/Registration/Login",
+    "RelativePath": "api/registration/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "userLogin",
-        "Type": "ModelLayer.RequestDTO.UserLoginRequest",
+        "Type": "ModelLayer.RequestDTO.Registration.UserLoginRequest",
         "IsRequired": true
       }
     ],

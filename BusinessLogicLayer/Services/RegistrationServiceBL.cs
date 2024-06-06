@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ModelLayer.Entities;
 using ModelLayer.MailSender;
-using ModelLayer.RequestDTO;
+using ModelLayer.RequestDTO.Registration;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -124,7 +124,6 @@ namespace BusinessLogicLayer.Services
                     Age=request.Age,
                     PhoneNumber = request.PhoneNumber,
                     Address= request.Address,
-                    AgentId = request.AgentId,
                 };
 
                 if(await repo.AddCustomer(userEntity))
@@ -174,7 +173,9 @@ namespace BusinessLogicLayer.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-            new Claim(ClaimTypes.NameIdentifier,user.Role)
+            new Claim(ClaimTypes.Role,user.Role),
+            new Claim(ClaimTypes.NameIdentifier,user.Id.ToString())
+
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

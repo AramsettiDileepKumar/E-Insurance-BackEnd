@@ -16,6 +16,5 @@ namespace ModelLayer.Entities
         public int Age { get; set; }
         public string? Address {  get; set; }
         public long PhoneNumber {  get; set; }
-        public  int AgentId {  get; set; }
     }
 }

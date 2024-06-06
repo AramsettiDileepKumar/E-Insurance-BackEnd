@@ -3,7 +3,8 @@ using Dapper;
 using Microsoft.Data.SqlClient;
 using ModelLayer.Entities;
 using ModelLayer.MailSender;
-using ModelLayer.RequestDTO;
+using ModelLayer.RequestDTO.Registration;
+using NLog;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
 using System;
@@ -18,6 +19,7 @@ namespace RepositoryLayer.Services
     public class RegistrationServiceRepo:IRegistrationRepo
     {
         private readonly DapperContext context;
+        private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
         public RegistrationServiceRepo(DapperContext context)
         {
             this.context = context; 
@@ -32,10 +34,15 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password",request.Password);
                 parameters.Add("Role", request.Role);
-               return await context.CreateConnection().ExecuteAsync("SP_RegisterAdmin", parameters) > 0;
+                _logger.Info("Admin Registration Executed");
+                using (var connection = context.CreateConnection())
+                {
+                    return await connection.ExecuteAsync("SP_RegisterAdmin", parameters) > 0;
+                }
             }
             catch (Exception ex) 
             {
+                _logger.Error(ex, "Error occured while Admin Registration ");
                 throw new Exception(ex.Message);
             }
         }
@@ -48,9 +55,13 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
-               return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) > 0;
+                _logger.Info("Employee Registration Executed");
+                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) > 0;
             }
-            catch (Exception ex) { throw new Exception(ex.StackTrace); }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error occured while Employee Registration ");
+                throw new Exception(ex.StackTrace); }
         }
         public async Task<bool> AddAgent(UserEntity request)
         {
@@ -61,9 +72,13 @@ namespace RepositoryLayer.Services
                 parameters.Add("EmailId", request.EmailId);
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
+                _logger.Info("Agent Registration Executed");
                 return await context.CreateConnection().ExecuteAsync("SP_AddAgent", parameters) > 0;
             }
-            catch (Exception ex) { throw new Exception(ex.StackTrace); }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error occured while Agent Registration ");
+                throw new Exception(ex.StackTrace); }
         }
         public async Task<bool> AddCustomer(UserEntity request)
         {
@@ -77,10 +92,13 @@ namespace RepositoryLayer.Services
                 parameters.Add("Age", request.Age);
                 parameters.Add("PhoneNumber", request.PhoneNumber);
                 parameters.Add("Address", request.Address);
-                parameters.Add("AgentId", request.AgentId);
+                _logger.Info("Customer Registration Executed");
                 return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) > 0;
             }
-            catch (Exception ex) { throw new Exception(ex.StackTrace); }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error occured while customer Registration ");
+                throw new Exception(ex.StackTrace); }
         }
         public async Task<UserEntity> Login(UserLoginRequest userLogin)
         {
@@ -98,6 +116,7 @@ namespace RepositoryLayer.Services
                 {
                     throw new Exception($"User with email '{userLogin.EmailId}' not found.");
                 }
+                _logger.Info("Login API Executed");
                 return user;
             }
             catch (SqlException ex)
@@ -106,6 +125,7 @@ namespace RepositoryLayer.Services
             }
             catch (Exception ex)
             {
+                _logger.Error(ex, "Error occured while Login ");
                 throw new Exception(ex.Message);
             }
         }
