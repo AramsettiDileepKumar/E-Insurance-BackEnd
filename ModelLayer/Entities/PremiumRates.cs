@@ -8,7 +8,7 @@ namespace ModelLayer.Entities
 {
     public class PremiumRates
     {
-            public string PlanType { get; set; }
+            public string PolicyType { get; set; }
             public string AgeGroup { get; set; }
             public decimal Rate { get; set; }
     }

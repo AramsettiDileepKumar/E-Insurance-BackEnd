@@ -29,10 +29,9 @@ namespace RepositoryLayer.Services
                 parameters.Add("PolicyName", request.PolicyName);
                 parameters.Add("PolicyDescription", request.PolicyDescription);
                 parameters.Add("PolicyType", request.PolicyType);
-                parameters.Add("CoverageAmount", request.CoverageAmount);
+                parameters.Add("ClaimSettlementRatio", request.ClaimSettlementRatio);
                 parameters.Add("EntryAge", request.EntryAge);
                 parameters.Add("AnnualPremiumRange", request.AnnualPremiumRange);
-                parameters.Add("TermLength", request.TermLength);
 
                 _logger.Info("Policy Insertion Executed");
 

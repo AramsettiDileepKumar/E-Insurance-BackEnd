@@ -8,6 +8,7 @@ using NLog.Web;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
 using RepositoryLayer.Services;
+using StackExchange.Redis;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,8 @@ builder.Services.AddScoped<IPolicyBL, PolicyServiceBL>();
 builder.Services.AddScoped<IPolicyRepo, PolicyServiceRepo>();
 builder.Services.AddScoped<IPurchaseBL,PurchaseServiceBL>();
 builder.Services.AddScoped<IPurchaseRepo,PurchaseServiceRepo>();
+builder.Services.AddScoped<IPaymentBL,PaymentServiceBL>();
+builder.Services.AddScoped<IPaymentRepo,PaymentServiceRepo>();
 //---JWT
 // Get the secret key from the configuration
 var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtSettings:Secret"]);
@@ -86,8 +89,6 @@ builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(LogLevel.Trace);
 builder.Host.UseNLog();
 builder.Services.AddSingleton<NLog.ILogger>(NLog.LogManager.GetCurrentClassLogger());
-
-
 /////////////////////RabbitMQ
 //builder.Services.AddMassTransit(x =>
 //{
@@ -103,6 +104,14 @@ builder.Services.AddSingleton<NLog.ILogger>(NLog.LogManager.GetCurrentClassLogge
 //});
 //builder.Services.AddMassTransitHostedService();
 //////
+///Redis
+builder.Services.AddSingleton<ConnectionMultiplexer>(provider =>
+{
+    var configuration = provider.GetRequiredService<IConfiguration>(); // Retrieve the IConfiguration object
+    var redisConnectionString = configuration.GetConnectionString("RedisCacheUrl");
+    return ConnectionMultiplexer.Connect(redisConnectionString);
+});
+///
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

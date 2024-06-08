@@ -28,10 +28,9 @@ namespace BusinessLogicLayer.Services
                     PolicyName = request.PolicyName,
                     PolicyType = request.PolicyType,
                     PolicyDescription = request.PolicyDescription,
-                    CoverageAmount = request.CoverageAmount,
+                    ClaimSettlementRatio=request.ClaimSettlementRatio,
                     EntryAge = request.EntryAge,
                     AnnualPremiumRange = request.AnnualPremiumRange,   
-                    TermLength = request.TermLength,
                 };
                 return await policy.AddPolicy(policyEntity);
             }

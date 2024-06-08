@@ -60,7 +60,7 @@ namespace RepositoryLayer.Services
                     var parameters = new DynamicParameters();
                     parameters.Add("CustomerId",CustomerId, DbType.Int32);
                     _logger.Info("Policy Purchased Executed");
-                    return await connections.QueryAsync<PolicyEntity>("SP_getAllCustomerPolicies", parameters);
+                    return await connections.QueryAsync<PolicyEntity>("SP_getCustomerPolicies", parameters);
                 }
             }
             catch(Exception ex) 
@@ -76,7 +76,7 @@ namespace RepositoryLayer.Services
                 using (var connection = context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("@PlanType", premiumRate.PlanType, DbType.String);
+                    parameters.Add("@PolicyType", premiumRate.PolicyType, DbType.String);
                     parameters.Add("@AgeGroup", premiumRate.AgeGroup, DbType.String);
                     parameters.Add("@Rate", premiumRate.Rate, DbType.Decimal);
                     var result = await connection.ExecuteAsync("SP_AddPremiumRate", parameters, commandType: CommandType.StoredProcedure);
@@ -88,15 +88,17 @@ namespace RepositoryLayer.Services
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<decimal> CalculatePremium(int policyId, int age)
+        public async Task<decimal> CalculatePremium(CalculatePremiumRequest request)
         {
             try
             {
                 using (var connection = context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("@PolicyId", policyId, DbType.Int32);
-                    parameters.Add("@Age", age, DbType.Int32);
+                    parameters.Add("PolicyId", request.PolicyId, DbType.Int32);
+                    parameters.Add("CoverageAmount",request.CoverageAmount, DbType.Int32);
+                    parameters.Add("Tenure",request.Tenure, DbType.Int32);
+                    parameters.Add("PremiumType", request.PremiumType, DbType.String);
                     parameters.Add("@Premium", dbType: DbType.Decimal, direction: ParameterDirection.Output);
                     await connection.ExecuteAsync("SP_CalculatePremium", parameters, commandType: CommandType.StoredProcedure);
                     decimal premium = parameters.Get<decimal>("@Premium");
@@ -106,6 +108,23 @@ namespace RepositoryLayer.Services
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while calculating the premium "+ex.Message);
+            }
+        }
+        public async Task<int> AddPremium(PremiumRequest request)
+        {
+            try
+            {
+                using(var connection = context.CreateConnection())
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("PolicyId", request.PolicyId);
+                    parameters.Add("PremiumAmount", request.PremiumAmoumt);
+                    return await connection.ExecuteAsync("", request); 
+                }
+            }
+            catch(Exception ex) 
+            {
+            throw new Exception(ex.Message);
             }
         }
 

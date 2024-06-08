@@ -525,3 +525,102 @@ Error Number:201,State:4,Class:16
 2024-06-06 19:16:05.1274|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 43.5545ms
 2024-06-06 19:16:05.2350|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
 2024-06-06 19:16:05.2997|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 64.7198ms
+2024-06-06 19:16:19.0352|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/purchase/CalculatePremium?policyId=1&age=26 - - -
+2024-06-06 19:16:19.0519|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.purchaseController.CalculatePremium (E-Insurance)'
+2024-06-06 19:16:19.0969|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CalculatePremium", controller = "purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CalculatePremium(Int32, Int32) on controller E_Insurance.Controllers.purchaseController (E-Insurance).
+2024-06-06 19:16:19.9022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String'.
+2024-06-06 19:16:19.9082|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.purchaseController.CalculatePremium (E-Insurance) in 805.8191ms
+2024-06-06 19:16:19.9082|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.purchaseController.CalculatePremium (E-Insurance)'
+2024-06-06 19:16:19.9082|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/purchase/CalculatePremium?policyId=1&age=26 - 500 - text/plain;+charset=utf-8 874.6731ms
+2024-06-06 23:23:00.1727|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-06 23:23:01.2097|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-06 23:23:01.2097|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-06 23:23:01.2484|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-06 23:23:01.2484|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-06 23:23:01.2484|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-06 23:23:02.2323|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-06 23:23:02.7626|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 541.6904ms
+2024-06-06 23:23:02.7626|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-06 23:23:02.7793|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-06 23:23:02.7793|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 11.1897ms
+2024-06-06 23:23:02.9218|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 142.4728ms
+2024-06-06 23:23:03.0169|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-06 23:23:03.1210|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 104.5130ms
+2024-06-06 23:23:59.2837|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 109
+2024-06-06 23:23:59.2924|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:23:59.2924|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-06 23:23:59.7994|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-06 23:24:00.9317|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-06 23:24:00.9396|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 1617.9717ms
+2024-06-06 23:24:00.9396|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:24:00.9396|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 200 - application/json;+charset=utf-8 1662.4873ms
+2024-06-06 23:24:53.1774|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 121
+2024-06-06 23:24:53.1774|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:24:53.1774|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-06 23:24:53.1774|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-06 23:24:53.2184|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-06 23:24:53.2184|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 36.402ms
+2024-06-06 23:24:53.2184|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:24:53.2196|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 200 - application/json;+charset=utf-8 42.2817ms
+2024-06-06 23:27:30.0155|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-06 23:27:30.0776|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 63.2460ms
+2024-06-06 23:27:30.1101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-06 23:27:30.1101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-06 23:27:30.1101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 3.4571ms
+2024-06-06 23:27:30.1396|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 29.5177ms
+2024-06-06 23:27:30.4770|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-06 23:27:30.4912|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 14.1426ms
+2024-06-06 23:28:29.3510|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 121
+2024-06-06 23:28:29.3635|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:28:29.3635|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-06 23:28:29.3753|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-06 23:28:29.3910|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-06 23:28:29.3910|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 22.2986ms
+2024-06-06 23:28:29.3910|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:28:29.3910|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 200 - application/json;+charset=utf-8 44.9454ms
+2024-06-06 23:31:43.2390|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-06 23:31:43.6260|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-06 23:31:43.6260|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-06 23:31:43.6742|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-06 23:31:43.6742|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-06 23:31:43.6742|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-06 23:31:44.3472|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-06 23:31:44.7835|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 441.8914ms
+2024-06-06 23:31:44.7979|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-06 23:31:44.8073|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-06 23:31:44.8073|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 21.0134ms
+2024-06-06 23:31:44.9018|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 94.5406ms
+2024-06-06 23:31:44.9760|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-06 23:31:45.0766|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 101.6507ms
+2024-06-06 23:32:47.9551|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 121
+2024-06-06 23:32:47.9881|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:32:48.0618|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-06 23:32:48.2119|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-06 23:33:01.4763|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-06 23:33:01.4872|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 13420.286ms
+2024-06-06 23:33:01.4872|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:33:01.4872|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 200 - application/json;+charset=utf-8 13533.9800ms
+2024-06-06 23:34:09.4049|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-06 23:34:09.4299|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 24.9215ms
+2024-06-06 23:34:09.4556|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-06 23:34:09.4569|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-06 23:34:09.4642|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 8.3014ms
+2024-06-06 23:34:09.4642|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 20.8626ms
+2024-06-06 23:34:09.6553|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-06 23:34:09.6723|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 18.2173ms
+2024-06-06 23:36:18.3444|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-06 23:36:18.3783|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 33.9615ms
+2024-06-06 23:36:18.4017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-06 23:36:18.4017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-06 23:36:18.4017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 1.7208ms
+2024-06-06 23:36:18.4289|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 27.1773ms
+2024-06-06 23:36:18.5386|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-06 23:36:18.5468|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 8.5755ms
+2024-06-06 23:36:48.2707|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 121
+2024-06-06 23:36:48.2707|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:36:48.2845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-06 23:36:48.3339|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-06 23:37:02.9042|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-06 23:37:02.9042|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 14622.3748ms
+2024-06-06 23:37:02.9042|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-06 23:37:02.9042|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 200 - application/json;+charset=utf-8 14637.0562ms

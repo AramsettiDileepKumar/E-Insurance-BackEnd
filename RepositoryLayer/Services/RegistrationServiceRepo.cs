@@ -92,7 +92,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
                 _logger.Info("Customer Registration Executed");
-                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) < 0;
+                return await context.CreateConnection().ExecuteAsync("SP_AddCustomer", parameters) > 0;
             }
             catch (Exception ex)
             {

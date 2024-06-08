@@ -49,12 +49,12 @@ namespace E_Insurance.Controllers
                 return BadRequest(ex.Message);  
             }
         }
-        [HttpGet("CalculatePremium")]
-        public async Task<IActionResult> CalculatePremium(int policyId, int age)
+        [HttpPost("calculatePremium")]
+        public async Task<IActionResult> CalculatePremium(CalculatePremiumRequest request)
         {
             try
             {
-                var premium = await purchase.CalculatePremium(policyId, age);
+                var premium = await purchase.CalculatePremium(request);
                 return Ok(new { Premium = premium });
             }
             catch (Exception ex)
@@ -63,7 +63,7 @@ namespace E_Insurance.Controllers
             }
         }
         [HttpPost("addPremiumRate")]
-        public async Task<IActionResult> AddPremiumRate([FromBody] PremiumRates premiumRate)
+        public async Task<IActionResult> AddPremiumRate( PremiumRates premiumRate)
         {
  
             try
@@ -75,6 +75,16 @@ namespace E_Insurance.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
+        [HttpPost("addPremium")]
+        public async Task<IActionResult> AddPremium(PremiumRequest request)
+        {
+            try
+            {
+                var result = await purchase.AddPremium(request);
+                return CreatedAtAction(nameof(AddPremium), result);
+            }
+            catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

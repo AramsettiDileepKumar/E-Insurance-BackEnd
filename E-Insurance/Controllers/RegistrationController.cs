@@ -67,7 +67,7 @@ namespace E_Insurance.Controllers
             try
             {
                 var result = await user.AddCustomer(request);
-                return Ok(new ResponseModel<bool> { Success = true, Message = "Customer Added Successfully" });
+                return Ok(new ResponseModel<bool> { Success = true, Message = "Customer Added Successfully" ,Data=result});
             }
             catch (Exception ex)
             {

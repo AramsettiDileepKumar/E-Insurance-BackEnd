@@ -12,7 +12,8 @@ namespace BusinessLogicLayer.Interfaces
     {
         Task<bool> purchasePolicy(purchaseRequest request);
         Task<IEnumerable<PolicyEntity>> ViewPolicies(int CustomerId);
-        Task<decimal> CalculatePremium(int PolicyId, int age);
+        Task<decimal> CalculatePremium(CalculatePremiumRequest request);
         Task<int> AddPremiumRate(PremiumRates premiumRate);
+        Task<int> AddPremium(PremiumRequest premiumRequest);    
     }
 }
