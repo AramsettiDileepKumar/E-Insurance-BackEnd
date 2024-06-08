@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "E_Insurance.Controllers.paymentController",
+    "Method": "Addpayment",
+    "RelativePath": "api/payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.Paymentmodels.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "E_Insurance.Controllers.PoliciesController",
     "Method": "AddPolicy",
     "RelativePath": "api/Policies",
@@ -53,6 +69,22 @@
   },
   {
     "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "AddPremium",
+    "RelativePath": "api/purchase/addPremium",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.PremiumRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
     "Method": "AddPremiumRate",
     "RelativePath": "api/purchase/addPremiumRate",
     "HttpMethod": "POST",
@@ -70,20 +102,15 @@
   {
     "ContainingType": "E_Insurance.Controllers.purchaseController",
     "Method": "CalculatePremium",
-    "RelativePath": "api/purchase/CalculatePremium",
-    "HttpMethod": "GET",
+    "RelativePath": "api/purchase/calculatePremium",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "policyId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "age",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.CalculatePremiumRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -13,7 +13,8 @@ namespace ModelLayer.MailSender
     {
         public static void sendMail(string Email,string password)
         {
-            MailMessage mailMessage = new MailMessage("dilip20721@outlook.com", Email);
+            Console.WriteLine(Email);
+            MailMessage mailMessage = new MailMessage("dileep20721@outlook.com", Email);
             try
             {
                 mailMessage.Subject = "E-Insurance";
@@ -21,7 +22,7 @@ namespace ModelLayer.MailSender
                 mailMessage.IsBodyHtml = true;
                 SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com", 587);
                 smtpClient.EnableSsl = true;
-                NetworkCredential networkCredential = new NetworkCredential("dilip20721@outlook.com", "Dileep@21700");
+                NetworkCredential networkCredential = new NetworkCredential("dileep20721@outlook.com", "ammadeepu@123");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Send(mailMessage);

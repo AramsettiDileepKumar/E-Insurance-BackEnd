@@ -88,3 +88,5 @@ C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\RabbitMQ.Cl
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.dll
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.Extensions.Logging.dll
 C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\NLog.Web.AspNetCore.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\dilee\source\repos\E-Insurance\E-Insurance\bin\Debug\net8.0\StackExchange.Redis.dll

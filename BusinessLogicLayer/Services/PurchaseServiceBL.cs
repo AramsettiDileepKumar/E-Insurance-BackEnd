@@ -36,11 +36,11 @@ namespace BusinessLogicLayer.Services
             }
             catch(Exception ex) { throw new Exception(ex.Message); }
         }
-        public async Task<decimal> CalculatePremium(int PolicyId, int age)
+        public async Task<decimal> CalculatePremium(CalculatePremiumRequest request)
         {
             try
             {
-                return await purchase.CalculatePremium(PolicyId, age);
+                return await purchase.CalculatePremium(request);
             }
             catch(Exception ex) { throw new Exception(ex.Message); }
         }
@@ -51,6 +51,10 @@ namespace BusinessLogicLayer.Services
                return await purchase.AddPremiumRate(premiumRate);
             }
             catch(Exception ex) { throw new Exception(ex.Message); }
+        }
+        public async Task<int> AddPremium(PremiumRequest request)
+        {
+            return await purchase.AddPremium(request);
         }
     }
 }

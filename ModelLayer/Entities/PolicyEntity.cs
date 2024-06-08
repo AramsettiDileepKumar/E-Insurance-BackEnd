@@ -13,8 +13,7 @@ namespace ModelLayer.Entities
         public string PolicyName { get; set; }
         public string PolicyDescription { get; set; }
         public string PolicyType { get; set; }
-        public double CoverageAmount { get; set; }
-        public int TermLength { get; set; }
+        public string? ClaimSettlementRatio { get; set; }
         public int EntryAge { get; set; }
         public double AnnualPremiumRange { get; set; }
     }
