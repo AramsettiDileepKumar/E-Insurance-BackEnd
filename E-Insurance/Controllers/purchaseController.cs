@@ -17,15 +17,16 @@ namespace E_Insurance.Controllers
         {
             this.purchase = purchase;
         }
-        [HttpPost]
-        public async Task<IActionResult> PurchasePolicy(purchaseRequest request)
+        [HttpPost("customerDetails")]
+        public async Task<IActionResult> CustomerDetails(CustomerDetailsRequest request)
         {
             try
             {
-                var result = await purchase.purchasePolicy(request);
+                var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var result = await purchase.CustomerDetails(request,CustomerId);
                 if (result)
                 {
-                    return CreatedAtAction(nameof(PurchasePolicy), new ResponseModel<bool> { Success = true, Message = "Policy Purchased Successfully", Data = result });
+                    return CreatedAtAction(nameof(CustomerDetails), new ResponseModel<bool> { Success = true, Message = "Policy Purchased Successfully", Data = result });
                 }
                 return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Purchasing Policy", Data = result });
 
@@ -76,15 +77,34 @@ namespace E_Insurance.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
-        [HttpPost("addPremium")]
-        public async Task<IActionResult> AddPremium(PremiumRequest request)
+        [HttpPost("purchasePolicy")]
+        public async Task<IActionResult> PolicyPurchase(int PolicyId)
         {
             try
             {
-                var result = await purchase.AddPremium(request);
-                return CreatedAtAction(nameof(AddPremium), result);
+                var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var result=await purchase.PurchasePolicy(CustomerId,PolicyId);
+                return CreatedAtAction(nameof(PolicyPurchase),result);
             }
-            catch (Exception ex) { return BadRequest(ex.Message); }
+            catch(Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
         }
+        [HttpPut("cancelPolicy")]
+        public async Task<IActionResult> PolicyCancellation(int policyId)
+        {
+            try
+            {
+                var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var result=await purchase.PolicyCancellation(CustomerId,policyId);
+                return Ok(result);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
     }
 }

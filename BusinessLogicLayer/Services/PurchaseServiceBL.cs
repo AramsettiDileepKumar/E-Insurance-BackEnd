@@ -17,18 +17,18 @@ namespace BusinessLogicLayer.Services
         {
             this.purchase = purchase;
         }
-        public async Task<bool> purchasePolicy(purchaseRequest request)
+        public async Task<bool> CustomerDetails(CustomerDetailsRequest request, int CustomerId)
         {
             try
             {
-                return await purchase.purchasePolicy(request);
+                return await purchase.CustomerDetails(request, CustomerId);
             }
             catch(Exception ex) 
             {
                 throw new Exception(ex.Message);
             }
         }
-        public async Task<IEnumerable<PolicyEntity>> ViewPolicies(int CustomerId)
+        public async Task<IEnumerable<PolicyPurchaseEntity>> ViewPolicies(int CustomerId)
         {
             try
             {
@@ -52,9 +52,14 @@ namespace BusinessLogicLayer.Services
             }
             catch(Exception ex) { throw new Exception(ex.Message); }
         }
-        public async Task<int> AddPremium(PremiumRequest request)
+        public async Task<int> PurchasePolicy(int CustomerId, int PolicyId)
         {
-            return await purchase.AddPremium(request);
+            return await purchase.PurchasePolicy(CustomerId, PolicyId);
         }
+        public async Task<int> PolicyCancellation(int CustomerId, int PolicyId)
+        {
+            return await purchase.PolicyCancellation(CustomerId, PolicyId); 
+        }
+
     }
 }

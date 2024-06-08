@@ -16,6 +16,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "E_Insurance.Controllers.paymentController",
+    "Method": "ViewPayment",
+    "RelativePath": "api/payment/getPayment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.paymentController",
+    "Method": "GenerateReceipt",
+    "RelativePath": "api/payment/getReceipt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PolicyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "E_Insurance.Controllers.PoliciesController",
     "Method": "AddPolicy",
     "RelativePath": "api/Policies",
@@ -43,44 +69,12 @@
   },
   {
     "ContainingType": "E_Insurance.Controllers.purchaseController",
-    "Method": "PurchasePolicy",
-    "RelativePath": "api/purchase",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ModelLayer.RequestDTO.PolicyModels.purchaseRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "E_Insurance.Controllers.purchaseController",
     "Method": "ViewPolicies",
     "RelativePath": "api/purchase",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "E_Insurance.Controllers.purchaseController",
-    "Method": "AddPremium",
-    "RelativePath": "api/purchase/addPremium",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ModelLayer.RequestDTO.PolicyModels.PremiumRequest",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {
@@ -111,6 +105,54 @@
         "Name": "request",
         "Type": "ModelLayer.RequestDTO.PolicyModels.CalculatePremiumRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "PolicyCancellation",
+    "RelativePath": "api/purchase/cancelPolicy",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "policyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "CustomerDetails",
+    "RelativePath": "api/purchase/customerDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.CustomerDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "PolicyPurchase",
+    "RelativePath": "api/purchase/purchasePolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PolicyId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
