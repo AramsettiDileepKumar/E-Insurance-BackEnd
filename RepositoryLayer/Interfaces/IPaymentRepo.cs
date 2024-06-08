@@ -1,4 +1,5 @@
-﻿using ModelLayer.RequestDTO.Paymentmodels;
+﻿using ModelLayer.Entities;
+using ModelLayer.RequestDTO.Paymentmodels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace RepositoryLayer.Interfaces
 {
     public interface IPaymentRepo
     {
-        Task<int> AddPayment(PaymentRequest paymentRequest);
+        Task<int> AddPayment(PaymentRequest paymentRequest, int CustomerId);
+        Task<IEnumerable<PaymentEntity>> getPayments(int CustomerId);
+        Task<PaymentEntity> getReceipt(int PolicyId, int CustomerId);
     }
 }

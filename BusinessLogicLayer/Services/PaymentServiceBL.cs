@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Interfaces;
+using ModelLayer.Entities;
 using ModelLayer.RequestDTO.Paymentmodels;
 using RepositoryLayer.Interfaces;
 using System;
@@ -16,9 +17,17 @@ namespace BusinessLogicLayer.Services
         {
             this.paymentRepo = paymentRepo;
         }
-        public async Task<int> AddPayment(PaymentRequest paymentRequest)
+        public async Task<int> AddPayment(PaymentRequest paymentRequest, int CustomerId)
         {
-            return await paymentRepo.AddPayment(paymentRequest);
+            return await paymentRepo.AddPayment(paymentRequest, CustomerId);
+        }
+        public async Task<IEnumerable<PaymentEntity>> getPayments(int CustomerId)
+        {
+            return await paymentRepo.getPayments(CustomerId);
+        }
+        public async Task<PaymentEntity> getReceipt(int PolicyId, int CustomerId)
+        {
+            return await paymentRepo.getReceipt(PolicyId,CustomerId);
         }
     }
 }

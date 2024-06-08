@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.RequestDTO.PolicyModels
 {
-    public class purchaseRequest
+    public class CustomerDetailsRequest
     {
-            public int CustomerId { get; set; }
             public int PolicyId { get; set; }
             public int AgentId { get; set; }
             public decimal AnnualIncome { get; set; }

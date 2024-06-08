@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.Entities
 {
-    public class PurchaseEntity
+    public class CustomerDetails
     { 
             public int PurchaseId { get; set; }
             public int CustomerId { get; set; }
@@ -19,7 +19,6 @@ namespace ModelLayer.Entities
             public DateTime DateOfBirth { get; set; }
             public long MobileNumber { get; set; }
             public string Address { get; set; }
-            public DateTime PurchaseDate { get; set; }
-        
+            public DateTime PurchaseDate { get; set; }   
     }
 }

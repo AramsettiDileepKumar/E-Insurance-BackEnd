@@ -22,14 +22,14 @@ namespace RepositoryLayer.Services
         {
             this.context = context;
         }
-        public async Task<bool> purchasePolicy(purchaseRequest request)
+        public async Task<bool> CustomerDetails(CustomerDetailsRequest request, int CustomerId)
         {
             try
             {
                 using (var connection = context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("@CustomerId", request.CustomerId, DbType.Int32);
+                    parameters.Add("@CustomerId", CustomerId, DbType.Int32);
                     parameters.Add("@PolicyId", request.PolicyId, DbType.Int32);
                     parameters.Add("@AgentId", request.AgentId, DbType.Int32);
                     parameters.Add("@AnnualIncome", request.AnnualIncome, DbType.Decimal);
@@ -48,10 +48,10 @@ namespace RepositoryLayer.Services
             catch (Exception ex)
             {
                 _logger.Error(ex, "Error occurred while Purchasing policy");
-                throw new Exception("An error occurred while processing the policy purchase", ex);
+                throw new Exception("An error occurred while processing the policy purchase "+ex.Message);
             }
         }
-       public async Task<IEnumerable<PolicyEntity>> ViewPolicies(int CustomerId)
+       public async Task<IEnumerable<PolicyPurchaseEntity>> ViewPolicies(int CustomerId)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace RepositoryLayer.Services
                     var parameters = new DynamicParameters();
                     parameters.Add("CustomerId",CustomerId, DbType.Int32);
                     _logger.Info("Policy Purchased Executed");
-                    return await connections.QueryAsync<PolicyEntity>("SP_getCustomerPolicies", parameters);
+                    return await connections.QueryAsync<PolicyPurchaseEntity>("SP_getCustomerPolicies", parameters);
                 }
             }
             catch(Exception ex) 
@@ -110,23 +110,41 @@ namespace RepositoryLayer.Services
                 throw new Exception("An error occurred while calculating the premium "+ex.Message);
             }
         }
-        public async Task<int> AddPremium(PremiumRequest request)
+        public async Task<int> PurchasePolicy(int CustomerId, int PolicyId)
         {
             try
             {
-                using(var connection = context.CreateConnection())
+                using(var connection = context.CreateConnection()) 
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("PolicyId", request.PolicyId);
-                    parameters.Add("PremiumAmount", request.PremiumAmoumt);
-                    return await connection.ExecuteAsync("", request); 
+                    parameters.Add("CustomerId",CustomerId);
+                    parameters.Add("PolicyId", PolicyId);
+                    return await connection.ExecuteAsync("SP_InsertPolicyPurchase", parameters);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<int> PolicyCancellation(int CustomerId, int PolicyId)
+        {
+            try
+            {
+                using( var connection = context.CreateConnection()) 
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("PolicyId", PolicyId);
+                    parameters.Add("CustomerId", CustomerId);
+                    return await connection.ExecuteAsync("SP_PolicyCancellation", parameters);
                 }
             }
             catch(Exception ex) 
             {
-            throw new Exception(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
+
 
     }
 }
