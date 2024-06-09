@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Entities;
@@ -16,7 +17,8 @@ namespace E_Insurance.Controllers
         {
             this.policy = policy;
         }
-        [HttpPost]
+        [HttpPost("createPolicy")]
+        [Authorize(Roles ="Employee,Agent")]
         public async Task<IActionResult> AddPolicy(PolicyRequest request)
         {
             try
@@ -24,16 +26,16 @@ namespace E_Insurance.Controllers
                 var result = await policy.AddPolicy(request);
                 if (result)
                 {
-                    return CreatedAtAction(nameof(AddPolicy),new ResponseModel<bool> {Success=true,Message="Policy added Successfully",Data=result } ); 
+                    return CreatedAtAction(nameof(AddPolicy),new ResponseModel<string> {Success=true,Message="Policy added Successfully",Data=null } ); 
                 }
-                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Creating Policy", Data = result });
+                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Creating Policy" });
             }
             catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
-        [HttpGet]
+        [HttpGet("allPolicies")]
         public async Task<IActionResult> getAllPolicies()
         {
             try

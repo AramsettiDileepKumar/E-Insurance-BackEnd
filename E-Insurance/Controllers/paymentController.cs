@@ -1,7 +1,9 @@
 ﻿using BusinessLogicLayer.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ModelLayer.Entities;
 using ModelLayer.RequestDTO.Paymentmodels;
+using ModelLayer.ResponseDTO;
 using System.Security.Claims;
 
 namespace E_Insurance.Controllers
@@ -22,7 +24,11 @@ namespace E_Insurance.Controllers
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
                 var result= await payment.AddPayment(request,CustomerId);
-                return CreatedAtAction(nameof(Addpayment),result);
+                if (result != 0)
+                {
+                    return CreatedAtAction(nameof(Addpayment),new ResponseModel<string> { Success=true,Message="Payment Added Successfully",Data=null});
+                }
+                return Ok(new ResponseModel<string> { Success =false, Message = "Error Occured While Adding Payment"});
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
         }
@@ -31,14 +37,26 @@ namespace E_Insurance.Controllers
         {
             var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var result=await payment.getPayments(CustomerId);
-            return Ok(result);
+            if (result != null)
+            {
+                return Ok(new ResponseModel<IEnumerable<PaymentEntity>> { Success = true, Message = "Payment Fetched Successfully", Data = result });
+            }
+            return Ok(new ResponseModel<string> { Success = false, Message = "Error Occued While Fetching Payment", Data = null });
         }
         [HttpGet("getReceipt")]
         public async Task<IActionResult> GenerateReceipt(int PolicyId)
         {
-            var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-            var result=await payment.getReceipt(PolicyId,CustomerId);
-            return Ok(result);
+            try
+            {
+                var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var result = await payment.getReceipt(PolicyId, CustomerId);
+                if (result != null)
+                {
+                    return Ok(new ResponseModel<PaymentEntity> { Success = true, Message = "Receipt Generated Successfully", Data =result });
+                }
+                return Ok(new ResponseModel<string> { Success = true, Message = "Error Occued While Generating Receipt", Data = null });
+            }
+            catch (Exception ex) { return BadRequest(ex.Message); }
         }
     }
 }

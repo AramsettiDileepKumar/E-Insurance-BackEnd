@@ -1,18 +1,12 @@
-﻿using Azure.Core;
+﻿
 using Dapper;
 using Microsoft.Data.SqlClient;
 using ModelLayer.Entities;
-using ModelLayer.MailSender;
 using ModelLayer.RequestDTO.Registration;
 using NLog;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RepositoryLayer.Services
 {
@@ -37,7 +31,7 @@ namespace RepositoryLayer.Services
                 _logger.Info("Admin Registration Executed");
                 using (var connection = context.CreateConnection())
                 {
-                    return await connection.ExecuteAsync("SP_RegisterAdmin", parameters) < 0;
+                    return await connection.ExecuteAsync("SP_RegisterAdmin", parameters) > 0;
                 }
             }
             catch (Exception ex) 
@@ -56,7 +50,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("Password", request.Password);
                 parameters.Add("Role", request.Role);
                 _logger.Info("Employee Registration Executed");
-                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) < 0;
+                return await context.CreateConnection().ExecuteAsync("SP_AddEmployee", parameters) > 0;
             }
             catch (Exception ex)
             {
@@ -75,7 +69,7 @@ namespace RepositoryLayer.Services
                 parameters.Add("Role", request.Role);
                 _logger.Info("Agent Registration Executed");
                 var result= await context.CreateConnection().ExecuteAsync("SP_AddAgent", parameters);
-                return result < 0;
+                return result > 0;
             }
             catch (Exception ex)
             {

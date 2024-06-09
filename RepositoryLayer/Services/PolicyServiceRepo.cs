@@ -34,7 +34,6 @@ namespace RepositoryLayer.Services
                 parameters.Add("AnnualPremiumRange", request.AnnualPremiumRange);
 
                 _logger.Info("Policy Insertion Executed");
-
                 using (var connection = context.CreateConnection())
                 {
                     return await connection.ExecuteAsync("SP_InsertPolicy", parameters, commandType: CommandType.StoredProcedure) > 0;

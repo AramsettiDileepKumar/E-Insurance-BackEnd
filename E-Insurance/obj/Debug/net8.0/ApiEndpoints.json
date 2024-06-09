@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "E_Insurance.Controllers.commissionController",
+    "Method": "AddCommisionRate",
+    "RelativePath": "api/commission/addCommisionRate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commissionRate",
+        "Type": "ModelLayer.Entities.CommissionRates",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.commissionController",
+    "Method": "CalculateCommission",
+    "RelativePath": "api/commission/calculateCommission",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.commissionController",
+    "Method": "getCommission",
+    "RelativePath": "api/commission/commission",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "E_Insurance.Controllers.paymentController",
     "Method": "Addpayment",
     "RelativePath": "api/payment",
@@ -43,8 +85,18 @@
   },
   {
     "ContainingType": "E_Insurance.Controllers.PoliciesController",
+    "Method": "getAllPolicies",
+    "RelativePath": "api/Policies/allPolicies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.PoliciesController",
     "Method": "AddPolicy",
-    "RelativePath": "api/Policies",
+    "RelativePath": "api/Policies/createPolicy",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -58,13 +110,35 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "E_Insurance.Controllers.PoliciesController",
-    "Method": "getAllPolicies",
-    "RelativePath": "api/Policies",
-    "HttpMethod": "GET",
+    "ContainingType": "E_Insurance.Controllers.premiumController",
+    "Method": "AddPremiumRate",
+    "RelativePath": "api/premium/addPremiumRate",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "premiumRate",
+        "Type": "ModelLayer.Entities.PremiumRates",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.premiumController",
+    "Method": "CalculatePremium",
+    "RelativePath": "api/premium/calculatePremium",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.PolicyModels.CalculatePremiumRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -79,34 +153,12 @@
   },
   {
     "ContainingType": "E_Insurance.Controllers.purchaseController",
-    "Method": "AddPremiumRate",
-    "RelativePath": "api/purchase/addPremiumRate",
-    "HttpMethod": "POST",
+    "Method": "AgentPolicies",
+    "RelativePath": "api/purchase/byAgent",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "premiumRate",
-        "Type": "ModelLayer.Entities.PremiumRates",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "E_Insurance.Controllers.purchaseController",
-    "Method": "CalculatePremium",
-    "RelativePath": "api/purchase/calculatePremium",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ModelLayer.RequestDTO.PolicyModels.CalculatePremiumRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -225,7 +277,7 @@
     "ContainingType": "E_Insurance.Controllers.registrationController",
     "Method": "Login",
     "RelativePath": "api/registration/login",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

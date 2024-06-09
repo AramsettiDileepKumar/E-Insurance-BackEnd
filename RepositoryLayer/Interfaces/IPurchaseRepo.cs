@@ -12,9 +12,11 @@ namespace RepositoryLayer.Interfaces
     {
         Task<bool> CustomerDetails(CustomerDetailsRequest request,int CustomerId);
         Task<IEnumerable<PolicyPurchaseEntity>> ViewPolicies(int CustomerId);
-        Task<decimal> CalculatePremium(CalculatePremiumRequest request);
-        Task<int> AddPremiumRate(PremiumRates premiumRate);
+       
         Task<int> PurchasePolicy(int CustomerId, int PolicyId);
         Task<int> PolicyCancellation(int CustomerId, int PolicyId);
+        
+        Task<IEnumerable<PolicyPurchaseEntity>> AgentPolicies(int AgentId);
+
     }
 }

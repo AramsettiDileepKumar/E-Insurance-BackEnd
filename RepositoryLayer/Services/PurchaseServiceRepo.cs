@@ -40,14 +40,14 @@ namespace RepositoryLayer.Services
                     parameters.Add("@MobileNumber", request.MobileNumber, DbType.Int64);
                     parameters.Add("@Address", request.Address, DbType.String);
                     parameters.Add("@PurchaseDate",DateTime.Now, DbType.DateTime);
-                    _logger.Info("Policy Purchased Executed");
+                    _logger.Info("Customer Details Executed");
                     var result = await connection.ExecuteAsync("SP_AddPurchase", parameters, commandType: CommandType.StoredProcedure);
-                    return result <0;
+                    return result>0;
                 }
             }
             catch (Exception ex)
             {
-                _logger.Error(ex, "Error occurred while Purchasing policy");
+                _logger.Error(ex, "Error occurred while Executing Customer Details");
                 throw new Exception("An error occurred while processing the policy purchase "+ex.Message);
             }
         }
@@ -59,7 +59,7 @@ namespace RepositoryLayer.Services
                 {
                     var parameters = new DynamicParameters();
                     parameters.Add("CustomerId",CustomerId, DbType.Int32);
-                    _logger.Info("Policy Purchased Executed");
+                    _logger.Info("Get policies Executed");
                     return await connections.QueryAsync<PolicyPurchaseEntity>("SP_getCustomerPolicies", parameters);
                 }
             }
@@ -69,47 +69,7 @@ namespace RepositoryLayer.Services
                 throw ex;
             }
         }
-        public async Task<int> AddPremiumRate(PremiumRates premiumRate)
-        {
-            try
-            {
-                using (var connection = context.CreateConnection())
-                {
-                    var parameters = new DynamicParameters();
-                    parameters.Add("@PolicyType", premiumRate.PolicyType, DbType.String);
-                    parameters.Add("@AgeGroup", premiumRate.AgeGroup, DbType.String);
-                    parameters.Add("@Rate", premiumRate.Rate, DbType.Decimal);
-                    var result = await connection.ExecuteAsync("SP_AddPremiumRate", parameters, commandType: CommandType.StoredProcedure);
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-        public async Task<decimal> CalculatePremium(CalculatePremiumRequest request)
-        {
-            try
-            {
-                using (var connection = context.CreateConnection())
-                {
-                    var parameters = new DynamicParameters();
-                    parameters.Add("PolicyId", request.PolicyId, DbType.Int32);
-                    parameters.Add("CoverageAmount",request.CoverageAmount, DbType.Int32);
-                    parameters.Add("Tenure",request.Tenure, DbType.Int32);
-                    parameters.Add("PremiumType", request.PremiumType, DbType.String);
-                    parameters.Add("@Premium", dbType: DbType.Decimal, direction: ParameterDirection.Output);
-                    await connection.ExecuteAsync("SP_CalculatePremium", parameters, commandType: CommandType.StoredProcedure);
-                    decimal premium = parameters.Get<decimal>("@Premium");
-                    return premium;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while calculating the premium "+ex.Message);
-            }
-        }
+       
         public async Task<int> PurchasePolicy(int CustomerId, int PolicyId)
         {
             try
@@ -119,11 +79,13 @@ namespace RepositoryLayer.Services
                     var parameters = new DynamicParameters();
                     parameters.Add("CustomerId",CustomerId);
                     parameters.Add("PolicyId", PolicyId);
+                    _logger.Info("Policy Purchased Executed");
                     return await connection.ExecuteAsync("SP_InsertPolicyPurchase", parameters);
                 }
             }
             catch(Exception ex)
             {
+                _logger.Error(ex, "Error occurred while Purchasing policy");
                 throw ex;
             }
         }
@@ -136,15 +98,35 @@ namespace RepositoryLayer.Services
                     var parameters = new DynamicParameters();
                     parameters.Add("PolicyId", PolicyId);
                     parameters.Add("CustomerId", CustomerId);
+                    _logger.Info("Policy cancellation Executed");
                     return await connection.ExecuteAsync("SP_PolicyCancellation", parameters);
                 }
             }
             catch(Exception ex) 
             {
+                _logger.Error(ex, "Error occurred while Policy cancellation");
                 throw new Exception(ex.Message);
             }
         }
 
-
+       
+        public async Task<IEnumerable<PolicyPurchaseEntity>> AgentPolicies(int AgentId)
+        {
+            try
+            {
+                using (var connections = context.CreateConnection())
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("AgentId",AgentId, DbType.Int32);
+                    _logger.Info("Agent Policies Executed");
+                    return await connections.QueryAsync<PolicyPurchaseEntity>("SP_getAgentPolicies", parameters);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error occurred while Fetching policies by AgentId");
+                throw ex;
+            }
+        }
     }
 }

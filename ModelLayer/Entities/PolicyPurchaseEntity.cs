@@ -10,7 +10,9 @@ namespace ModelLayer.Entities
     {
             public int PurchaseId { get; set; }
             public int PolicyId { get; set; }
+            public string? PolicyType { get; set; }
             public int CustomerId { get; set; }
+            public int AgentId { get; set; }
             public decimal CoverageAmount { get; set; }
             public int Tenure { get; set; }
             public string PremiumType { get; set; }

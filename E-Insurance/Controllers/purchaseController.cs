@@ -26,10 +26,9 @@ namespace E_Insurance.Controllers
                 var result = await purchase.CustomerDetails(request,CustomerId);
                 if (result)
                 {
-                    return CreatedAtAction(nameof(CustomerDetails), new ResponseModel<bool> { Success = true, Message = "Policy Purchased Successfully", Data = result });
+                    return CreatedAtAction(nameof(CustomerDetails), new ResponseModel<string> { Success = true, Message = "Policy Purchased Successfully", Data = null });
                 }
-                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Purchasing Policy", Data = result });
-
+                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Purchasing Policy" });
             }
             catch(Exception ex) 
             {
@@ -43,40 +42,19 @@ namespace E_Insurance.Controllers
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
                 var result = await purchase.ViewPolicies(CustomerId);
-                return Ok(result);
+                if (result != null)
+                {
+                    return Ok(new ResponseModel<IEnumerable<PolicyPurchaseEntity>> {Success=true,Message="Policies Fetched Successfully",Data=result });
+                }
+                return Ok(new ResponseModel<IEnumerable<PolicyPurchaseEntity>> { Success = false, Message = "Error Occured While Fetching Policies" });
             }
             catch(Exception ex) 
             {
                 return BadRequest(ex.Message);  
             }
         }
-        [HttpPost("calculatePremium")]
-        public async Task<IActionResult> CalculatePremium(CalculatePremiumRequest request)
-        {
-            try
-            {
-                var premium = await purchase.CalculatePremium(request);
-                return Ok(new { Premium = premium });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
-        [HttpPost("addPremiumRate")]
-        public async Task<IActionResult> AddPremiumRate( PremiumRates premiumRate)
-        {
- 
-            try
-            {
-               var result= await purchase.AddPremiumRate(premiumRate);
-                return CreatedAtAction(nameof(AddPremiumRate),result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
+       
+       
         [HttpPost("purchasePolicy")]
         public async Task<IActionResult> PolicyPurchase(int PolicyId)
         {
@@ -84,7 +62,11 @@ namespace E_Insurance.Controllers
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
                 var result=await purchase.PurchasePolicy(CustomerId,PolicyId);
-                return CreatedAtAction(nameof(PolicyPurchase),result);
+                if (result != 0)
+                {
+                    return CreatedAtAction(nameof(PolicyPurchase), new ResponseModel<string> { Success = true, Message = "Policies Purchased Successfully", Data = null }); 
+                }
+                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Purchasing Policy" });
             }
             catch(Exception ex) 
             {
@@ -98,13 +80,34 @@ namespace E_Insurance.Controllers
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
                 var result=await purchase.PolicyCancellation(CustomerId,policyId);
-                return Ok(result);
+                if (result != 0)
+                {
+                    return Ok(new ResponseModel<string> { Success = true, Message = "Policies Cancelled Successfully",Data=null});
+                }
+                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While cancelling Policy" });
             }
             catch (Exception ex) 
             {
                 return BadRequest(ex.Message);
             }
         }
-        
+        [HttpGet("byAgent")]
+        public async Task<IActionResult> AgentPolicies()
+        {
+            try
+            {
+                var AgentId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var result = await purchase.AgentPolicies(AgentId);
+                if (result != null)
+                {
+                    return Ok(new ResponseModel<IEnumerable<PolicyPurchaseEntity>> { Success = true, Message = "Policies Fetched by Agent Successfully",Data=result });
+                }
+                return Ok(new ResponseModel<string> { Success = false, Message = "Error Occured While Fetching Policies" ,Data=null});
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
