@@ -23,6 +23,11 @@ builder.Services.AddScoped<IPurchaseBL,PurchaseServiceBL>();
 builder.Services.AddScoped<IPurchaseRepo,PurchaseServiceRepo>();
 builder.Services.AddScoped<IPaymentBL,PaymentServiceBL>();
 builder.Services.AddScoped<IPaymentRepo,PaymentServiceRepo>();
+builder.Services.AddScoped<IPremiumBL,PremiumServiceBL>();
+builder.Services.AddScoped<IPremiumRepo,PremiumServiceRepo>();
+builder.Services.AddScoped<ICommissionBL,CommissionServiceBL>();
+builder.Services.AddScoped<ICommissionRepo,CommissionServiceRepo>();
+
 //---JWT
 // Get the secret key from the configuration
 var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtSettings:Secret"]);

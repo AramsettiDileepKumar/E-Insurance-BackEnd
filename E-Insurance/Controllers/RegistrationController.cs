@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -22,13 +23,17 @@ namespace E_Insurance.Controllers
             try
             {
                 var result = await user.AdminRegistration(request);
-                var responseModel = new ResponseModel<bool>
+                if (result)
                 {
-                    Success = true,
-                    Message = "Admin Added Successfully",
-                    Data = result
-                };
-                return CreatedAtAction(nameof(AdminRegistration), responseModel);
+                    var responseModel = new ResponseModel<string>
+                    {
+                        Success = true,
+                        Message = "Admin Added Successfully",
+                        Data = null
+                    };
+                    return CreatedAtAction(nameof(AdminRegistration), responseModel);
+                }
+                return Ok(new ResponseModel<string> { Success = false, Message = "Error Occured While Admin Registration" });
             }
             catch (Exception ex) 
             {
@@ -36,61 +41,79 @@ namespace E_Insurance.Controllers
             }
         }
         [HttpPost("employee")]
+        [Authorize(Roles="Admin")]
         public async Task<IActionResult> AddEmployee(UserRequest request)
         {
             try
             {
                 var result = await user.AddEmployee(request);
-                return Ok(new ResponseModel<bool> {Success=true,Message="Employee Added Successfully"}); ;
+                if (result)
+                {
+                    return CreatedAtAction(nameof(AddEmployee), new ResponseModel<string> { Success = true, Message = "Employee Added Successfully",Data=null });
+                }
+                return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Employee Regstration" });
             }
             catch (Exception ex) 
             {
-                return Ok(ex.Message);  
+                return BadRequest(ex.Message);  
             }
         }
         [HttpPost("agent")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddAgent(AgentRequest request)
         {
             try
             {
                 var result = await user.AddAgent(request);
-                return Ok(new ResponseModel<bool> { Success = true, Message = "Agent Added Successfully" });
+                if (result)
+                {
+                    return CreatedAtAction(nameof(AddAgent), new ResponseModel<string> { Success = true, Message = "Agent Added Successfully", Data = null });
+                }
+                return Ok(new ResponseModel<bool> { Success = false, Message = "An Error Occured While Agent Registration" });
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
         [HttpPost("customers")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddCustomers(UserRequest request)
         {
             try
             {
                 var result = await user.AddCustomer(request);
-                return Ok(new ResponseModel<bool> { Success = true, Message = "Customer Added Successfully" ,Data=result});
+                if (result)
+                {
+                    return CreatedAtAction(nameof(AddCustomers), new ResponseModel<string> { Success = true, Message = "Customer Added Successfully", Data = null });
+                }
+                return Ok(new ResponseModel<bool> { Success = false, Message = "An Error Occured while Customer Registration" });
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 
-        [HttpPost]
-        [Route("login")]
+        [HttpPut("login")]
         public async Task<IActionResult> Login(UserLoginRequest userLogin)
         {
             try
             {
                 var token = await user.Login(userLogin);
-                return Ok(new ResponseModel<string> { Success = true, Message = "Login Successfull",Data=token });
+                if (token != null)
+                {
+                    return Ok(new ResponseModel<string> { Success = true, Message = "Login Successfull", Data = token });
+                }
+                return Ok(new ResponseModel<string> { Success=false,Message="SomeThing Went wrong while Login"});
             }
             catch (SqlException ex)
             {
-                return Ok(ex.Message);
+                return BadRequest(ex.Message);
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
     }

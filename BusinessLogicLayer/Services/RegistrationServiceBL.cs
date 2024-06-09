@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using ModelLayer.Entities;
 using ModelLayer.MailSender;
 using ModelLayer.RequestDTO.Registration;
+using ModelLayer.Validation;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,12 @@ namespace BusinessLogicLayer.Services
                 {
                     throw new Exception();
                 }
+                bool isEmailValid = CheckValidation.ValidateEmail(request.EmailId);
+                bool isPasswordValid = CheckValidation.ValidatePassword(request.Password);
+                if(!isEmailValid && !isPasswordValid)
+                {
+                    throw new Exception("Invalid Format of Email or Password");
+                }
                 UserEntity userEntity = new UserEntity
                 {
                     FullName = request.FullName,
@@ -60,6 +67,12 @@ namespace BusinessLogicLayer.Services
                 if (request == null)
                 {
                     throw new Exception();
+                }
+                bool isEmailValid = CheckValidation.ValidateEmail(request.EmailId);
+                bool isPasswordValid = CheckValidation.ValidatePassword(request.Password);
+                if (!isEmailValid && !isPasswordValid)
+                {
+                    throw new Exception("Invalid Format of Email or Password");
                 }
                 UserEntity userEntity = new UserEntity
                 {
@@ -88,6 +101,12 @@ namespace BusinessLogicLayer.Services
                 {
                     throw new Exception();
                 }
+                bool isEmailValid = CheckValidation.ValidateEmail(request.EmailId);
+                bool isPasswordValid = CheckValidation.ValidatePassword(request.Password);
+                if (!isEmailValid && !isPasswordValid)
+                {
+                    throw new Exception("Invalid Format of Email or Password");
+                }
                 UserEntity userEntity = new UserEntity
                 {
                     FullName = request.FullName,
@@ -115,6 +134,12 @@ namespace BusinessLogicLayer.Services
                 if (request == null)
                 {
                     throw new Exception();
+                }
+                bool isEmailValid = CheckValidation.ValidateEmail(request.EmailId);
+                bool isPasswordValid = CheckValidation.ValidatePassword(request.Password);
+                if (!isEmailValid && !isPasswordValid)
+                {
+                    throw new Exception("Invalid Format of Email or Password");
                 }
                 UserEntity userEntity = new UserEntity
                 {
