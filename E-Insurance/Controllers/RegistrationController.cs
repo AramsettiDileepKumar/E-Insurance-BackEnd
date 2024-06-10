@@ -95,7 +95,7 @@ namespace E_Insurance.Controllers
             }
         }
 
-        [HttpPut("login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginRequest userLogin)
         {
             try

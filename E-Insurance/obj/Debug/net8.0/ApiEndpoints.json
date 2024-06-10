@@ -202,9 +202,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "PolicyId",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "ModelLayer.RequestDTO.Purchase.purchaseRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -277,7 +277,7 @@
     "ContainingType": "E_Insurance.Controllers.registrationController",
     "Method": "Login",
     "RelativePath": "api/registration/login",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

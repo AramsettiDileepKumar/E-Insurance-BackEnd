@@ -1,6 +1,7 @@
 ﻿using BusinessLogicLayer.Interfaces;
 using ModelLayer.Entities;
 using ModelLayer.RequestDTO.PolicyModels;
+using ModelLayer.RequestDTO.Purchase;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -37,9 +38,9 @@ namespace BusinessLogicLayer.Services
             catch(Exception ex) { throw new Exception(ex.Message); }
         }
       
-        public async Task<int> PurchasePolicy(int CustomerId, int PolicyId)
+        public async Task<int> PurchasePolicy(int CustomerId, purchaseRequest request)
         {
-            return await purchase.PurchasePolicy(CustomerId, PolicyId);
+            return await purchase.PurchasePolicy(CustomerId,request);
         }
         public async Task<int> PolicyCancellation(int CustomerId, int PolicyId)
         {
