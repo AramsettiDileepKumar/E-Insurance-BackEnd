@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using ModelLayer.Entities;
 using ModelLayer.RequestDTO.PolicyModels;
+using ModelLayer.RequestDTO.Purchase;
 using NLog;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
@@ -39,10 +40,9 @@ namespace RepositoryLayer.Services
                     parameters.Add("@DateofBirth", request.DateOfBirth, DbType.Date);
                     parameters.Add("@MobileNumber", request.MobileNumber, DbType.Int64);
                     parameters.Add("@Address", request.Address, DbType.String);
-                    parameters.Add("@PurchaseDate",DateTime.Now, DbType.DateTime);
                     _logger.Info("Customer Details Executed");
-                    var result = await connection.ExecuteAsync("SP_AddPurchase", parameters, commandType: CommandType.StoredProcedure);
-                    return result>0;
+                    var result = await connection.ExecuteAsync("SP_AddCustomerDetails", parameters, commandType: CommandType.StoredProcedure);
+                    return result<0;
                 }
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace RepositoryLayer.Services
             }
         }
        
-        public async Task<int> PurchasePolicy(int CustomerId, int PolicyId)
+        public async Task<int> PurchasePolicy(int CustomerId, purchaseRequest request)
         {
             try
             {
@@ -78,7 +78,11 @@ namespace RepositoryLayer.Services
                 {
                     var parameters = new DynamicParameters();
                     parameters.Add("CustomerId",CustomerId);
-                    parameters.Add("PolicyId", PolicyId);
+                    parameters.Add("PolicyId", request.PolicyId);
+                    parameters.Add("CoverageAmount", request.CoverageAmount, DbType.Int32);
+                    parameters.Add("Tenure", request.Tenure, DbType.Int32);
+                    parameters.Add("PremiumType", request.PremiumType, DbType.String);
+                    parameters.Add("PremiumAmount",request.PremiumAmount, DbType.Int32);
                     _logger.Info("Policy Purchased Executed");
                     return await connection.ExecuteAsync("SP_InsertPolicyPurchase", parameters);
                 }

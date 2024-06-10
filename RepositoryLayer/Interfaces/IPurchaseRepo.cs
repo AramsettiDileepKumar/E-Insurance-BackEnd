@@ -1,5 +1,6 @@
 ﻿using ModelLayer.Entities;
 using ModelLayer.RequestDTO.PolicyModels;
+using ModelLayer.RequestDTO.Purchase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace RepositoryLayer.Interfaces
         Task<bool> CustomerDetails(CustomerDetailsRequest request,int CustomerId);
         Task<IEnumerable<PolicyPurchaseEntity>> ViewPolicies(int CustomerId);
        
-        Task<int> PurchasePolicy(int CustomerId, int PolicyId);
+        Task<int> PurchasePolicy(int CustomerId, purchaseRequest request);
         Task<int> PolicyCancellation(int CustomerId, int PolicyId);
         
         Task<IEnumerable<PolicyPurchaseEntity>> AgentPolicies(int AgentId);

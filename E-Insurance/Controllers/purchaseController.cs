@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Entities;
 using ModelLayer.RequestDTO.PolicyModels;
+using ModelLayer.RequestDTO.Purchase;
 using ModelLayer.ResponseDTO;
 using System.Security.Claims;
 
@@ -56,12 +57,12 @@ namespace E_Insurance.Controllers
        
        
         [HttpPost("purchasePolicy")]
-        public async Task<IActionResult> PolicyPurchase(int PolicyId)
+        public async Task<IActionResult> PolicyPurchase(purchaseRequest request)
         {
             try
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-                var result=await purchase.PurchasePolicy(CustomerId,PolicyId);
+                var result=await purchase.PurchasePolicy(CustomerId,request);
                 if (result != 0)
                 {
                     return CreatedAtAction(nameof(PolicyPurchase), new ResponseModel<string> { Success = true, Message = "Policies Purchased Successfully", Data = null }); 
