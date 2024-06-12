@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,7 +46,7 @@ namespace BusinessLogicLayer.Services
                 {
                     FullName = request.FullName,
                     EmailId = request.EmailId,
-                    Password = Encrypt(request.Password),
+                    Password = Hashing(request.Password),
                     Role = request.Role,
                 };
                  if(await repo.AdminRegistration(userEntity))
@@ -78,7 +79,7 @@ namespace BusinessLogicLayer.Services
                 {
                     FullName = request.FullName,
                     EmailId = request.EmailId,
-                    Password = Encrypt(request.Password),
+                    Password = Hashing(request.Password),
                     Role = request.Role,
                 };
                  if(await repo.AddEmployee(userEntity))
@@ -111,7 +112,7 @@ namespace BusinessLogicLayer.Services
                 {
                     FullName = request.FullName,
                     EmailId = request.EmailId,
-                    Password = Encrypt(request.Password),
+                    Password = Hashing(request.Password),
                     Location = request.Location,
                     Role = request.Role,
                 };
@@ -145,7 +146,7 @@ namespace BusinessLogicLayer.Services
                 {
                     FullName = request.FullName,
                     EmailId = request.EmailId,
-                    Password = Encrypt(request.Password),
+                    Password =Hashing(request.Password),
                     Role = request.Role,
                 };
 
@@ -166,7 +167,7 @@ namespace BusinessLogicLayer.Services
         {
             var user= await repo.Login(userLogin);
 
-            if (Encrypt(userLogin.Password).Equals(user.Password))
+            if (Hashing(userLogin.Password).Equals(user.Password))
             {
                 return GenerateJwtToken(user);
             }
@@ -175,10 +176,13 @@ namespace BusinessLogicLayer.Services
                 throw new Exception("Incorrect password");
             }
         }
-        public string Encrypt(string password)
+        private string Hashing(string password)
         {
-            byte[] refer = Encoding.UTF8.GetBytes(password);
-            return Convert.ToBase64String(refer);
+            using (var sha256 = SHA256.Create())
+            {
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
         }
         public string GenerateJwtToken(UserEntity user)
         {

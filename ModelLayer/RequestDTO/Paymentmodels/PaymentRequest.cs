@@ -8,7 +8,7 @@ namespace ModelLayer.RequestDTO.Paymentmodels
 {
     public class PaymentRequest
     {
-        public string PaymentMethod { get; set; }
-        public int PolicyId { get; set; }
+        public string? PaymentMethod { get; set; }
+        public int PurchaseId { get; set; }
     }
 }

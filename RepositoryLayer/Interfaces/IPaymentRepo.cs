@@ -12,6 +12,6 @@ namespace RepositoryLayer.Interfaces
     {
         Task<int> AddPayment(PaymentRequest paymentRequest, int CustomerId);
         Task<IEnumerable<PaymentEntity>> getPayments(int CustomerId);
-        Task<PaymentEntity> getReceipt(int PolicyId, int CustomerId);
+        Task<PaymentEntity> getReceipt(int PurchaseId, int CustomerId);
     }
 }

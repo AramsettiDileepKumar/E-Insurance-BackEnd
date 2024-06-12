@@ -10,10 +10,10 @@ namespace E_Insurance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PoliciesController : ControllerBase
+    public class policiesController : ControllerBase
     {
         private readonly IPolicyBL policy;
-        public PoliciesController(IPolicyBL policy)
+        public policiesController(IPolicyBL policy)
         {
             this.policy = policy;
         }

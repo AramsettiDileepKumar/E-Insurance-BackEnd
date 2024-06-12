@@ -28,7 +28,7 @@ namespace RepositoryLayer.Services
                 {
                     var parameters = new DynamicParameters();
                     parameters.Add("PaymentMethod", paymentRequest.PaymentMethod);
-                    parameters.Add("PolicyId", paymentRequest.PolicyId);
+                    parameters.Add("PurchaseId", paymentRequest.PurchaseId);
                     parameters.Add("PaymentDate",DateTime.Now);
                     parameters.Add("Id",CustomerId);
                     _logger.Info("Add payment Executed");
@@ -59,14 +59,14 @@ namespace RepositoryLayer.Services
                 throw new Exception(ex.Message); 
             }
         }
-        public async Task<PaymentEntity> getReceipt(int PolicyId,int CustomerId)
+        public async Task<PaymentEntity> getReceipt(int PurchaseId, int CustomerId)
         {
             try
             {
                 using( var connection=context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("PolicyId", PolicyId);
+                    parameters.Add("PurchaseId", PurchaseId);
                     parameters.Add("CustomerId", CustomerId);
                     _logger.Info("Get Receipt Executed");
                     return await connection.QuerySingleAsync<PaymentEntity>("SP_getPolicyPayment", parameters);

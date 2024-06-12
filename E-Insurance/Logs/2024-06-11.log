@@ -1,0 +1,587 @@
+2024-06-11 11:57:59.2522|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/admin - application/json 110
+2024-06-11 11:57:59.4454|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 11:57:59.5766|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 11:57:59.7628|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Admin Registration Executed
+2024-06-11 11:58:06.0661|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 11:58:06.0991|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 6520.8243ms
+2024-06-11 11:58:06.0991|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 11:58:06.0991|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/admin - 201 - application/json;+charset=utf-8 6866.8551ms
+2024-06-11 12:02:06.9965|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 12:02:08.1731|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 12:02:08.1731|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 12:02:08.2658|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 12:02:08.2671|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 12:02:08.2671|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 12:02:09.4685|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 12:02:10.3440|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 887.4366ms
+2024-06-11 12:02:10.4418|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 12:02:10.4541|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 12:02:10.4541|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 12.6478ms
+2024-06-11 12:02:10.6690|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 214.9669ms
+2024-06-11 12:02:10.8104|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 12:02:11.0110|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 201.3976ms
+2024-06-11 12:03:37.5429|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/admin - application/json 110
+2024-06-11 12:03:37.5667|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:03:37.6687|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 12:03:38.1955|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Admin Registration Executed
+2024-06-11 12:03:42.4345|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 12:03:42.4717|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 4796.8568ms
+2024-06-11 12:03:42.4717|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:03:42.4717|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/admin - 201 - application/json;+charset=utf-8 4932.2387ms
+2024-06-11 12:15:18.7367|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/admin - application/json 110
+2024-06-11 12:15:18.8028|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:15:18.8235|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 12:15:18.8972|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Admin Registration Executed
+2024-06-11 12:15:21.1789|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 12:15:21.1923|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 2364.9193ms
+2024-06-11 12:15:21.1923|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:15:21.1923|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/admin - 201 - application/json;+charset=utf-8 2467.0716ms
+2024-06-11 12:16:15.7972|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 12:16:16.3299|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 12:16:16.3299|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 12:16:16.3821|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 12:16:16.3821|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 12:16:16.3821|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 12:16:17.8626|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 12:16:18.4670|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 612.0762ms
+2024-06-11 12:16:18.4790|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 12:16:18.4790|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 12:16:18.5108|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 27.7115ms
+2024-06-11 12:16:18.5888|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 109.9957ms
+2024-06-11 12:16:18.8681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 12:16:19.0481|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 180.5408ms
+2024-06-11 12:16:58.3826|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/admin - application/json 110
+2024-06-11 12:16:58.3961|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:16:58.4439|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 12:16:58.5666|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Admin Registration Executed
+2024-06-11 12:17:03.0227|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 12:17:03.0722|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 4619.3342ms
+2024-06-11 12:17:03.0722|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 12:17:03.0722|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/admin - 201 - application/json;+charset=utf-8 4692.5575ms
+2024-06-11 12:28:39.0800|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/purchase - - -
+2024-06-11 12:28:39.1576|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.purchaseController.ViewPolicies (E-Insurance)'
+2024-06-11 12:28:39.2436|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "ViewPolicies", controller = "purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPolicies() on controller E_Insurance.Controllers.purchaseController (E-Insurance).
+2024-06-11 12:28:39.5089|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 12:28:39.5089|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.purchaseController.ViewPolicies (E-Insurance) in 265.777ms
+2024-06-11 12:28:39.5089|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.purchaseController.ViewPolicies (E-Insurance)'
+2024-06-11 12:28:39.5089|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/purchase - 400 - text/plain;+charset=utf-8 440.7462ms
+2024-06-11 12:29:06.3988|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/purchase/byAgent - - -
+2024-06-11 12:29:06.3988|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.purchaseController.AgentPolicies (E-Insurance)'
+2024-06-11 12:29:06.4150|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AgentPolicies", controller = "purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AgentPolicies() on controller E_Insurance.Controllers.purchaseController (E-Insurance).
+2024-06-11 12:29:06.4750|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 12:29:06.4750|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.purchaseController.AgentPolicies (E-Insurance) in 60.2037ms
+2024-06-11 12:29:06.4750|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.purchaseController.AgentPolicies (E-Insurance)'
+2024-06-11 12:29:06.4750|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/purchase/byAgent - 400 - text/plain;+charset=utf-8 76.9755ms
+2024-06-11 12:45:42.4206|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 12:45:42.7075|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 12:45:42.7075|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 12:45:42.7619|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 12:45:42.7619|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 12:45:42.7619|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 12:45:43.9335|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 12:45:44.6176|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 693.9023ms
+2024-06-11 12:45:44.6379|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 12:45:44.6379|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 12:45:44.6379|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 10.1633ms
+2024-06-11 12:45:44.7524|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 114.7315ms
+2024-06-11 12:45:44.8095|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 12:45:45.0212|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 211.7403ms
+2024-06-11 12:47:15.2605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 86
+2024-06-11 12:47:15.2810|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 12:47:15.3319|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 12:47:16.2726|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 12:47:16.3384|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 12:47:16.3517|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 1011.077ms
+2024-06-11 12:47:16.3535|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 12:47:16.3535|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 200 - application/json;+charset=utf-8 1094.1513ms
+2024-06-11 12:48:18.7030|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/employee - application/json 112
+2024-06-11 12:48:18.8243|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 12:48:18.8319|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddEmployee", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddEmployee(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 12:48:18.8491|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Employee Registration Executed
+2024-06-11 12:48:22.5375|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 12:48:22.5772|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance) in 3743.756ms
+2024-06-11 12:48:22.5772|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 12:48:22.5772|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/employee - 201 - application/json;+charset=utf-8 3874.9735ms
+2024-06-11 13:49:41.8711|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 13:49:42.3560|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 13:49:42.3560|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 13:49:42.4115|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 13:49:42.4115|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 13:49:42.4115|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 13:49:43.5747|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 13:49:43.9020|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 333.8182ms
+2024-06-11 13:49:43.9378|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 13:49:43.9378|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 13:49:43.9570|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 18.7551ms
+2024-06-11 13:49:44.0004|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 62.2318ms
+2024-06-11 13:49:44.0709|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 13:49:44.1701|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 99.0023ms
+2024-06-11 13:49:53.2645|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:49:53.2862|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:49:53.3246|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:49:53.5578|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:49:53.5643|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 232.0634ms
+2024-06-11 13:49:53.5643|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:49:53.5643|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 300.1309ms
+2024-06-11 13:51:00.5553|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 86
+2024-06-11 13:51:00.5553|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 13:51:00.5648|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 13:51:01.7044|ERROR|RepositoryLayer.Services.RegistrationServiceRepo|Error occured while Login |System.InvalidOperationException: BeginExecuteReader: CommandText property has not been initialized
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at RepositoryLayer.Services.RegistrationServiceRepo.Login(UserLoginRequest userLogin) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\RegistrationServiceRepo.cs:line 108
+2024-06-11 13:51:02.6811|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:51:02.6811|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 2116.7702ms
+2024-06-11 13:51:02.6811|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 13:51:02.6827|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 400 - text/plain;+charset=utf-8 2127.8985ms
+2024-06-11 13:51:17.3146|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 85
+2024-06-11 13:51:17.3146|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 13:51:17.3146|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 13:51:17.5296|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 13:51:17.5808|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 13:51:17.5852|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 263.5085ms
+2024-06-11 13:51:17.5852|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 13:51:17.5852|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 200 - application/json;+charset=utf-8 271.2019ms
+2024-06-11 13:51:34.8973|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:51:34.9835|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:51:34.9835|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:51:34.9835|INFO|RepositoryLayer.Services.PaymentServiceRepo|Get Receipt Executed
+2024-06-11 13:51:35.1501|ERROR|RepositoryLayer.Services.PaymentServiceRepo|Error occured while Getting Receipt |System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowMultipleRows(Row row) in /_/Dapper/SqlMapper.cs:line 1246
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 498
+   at RepositoryLayer.Services.PaymentServiceRepo.getReceipt(Int32 PurchaseId, Int32 CustomerId) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\PaymentServiceRepo.cs:line 72
+2024-06-11 13:51:35.2443|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:51:35.2443|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 260.7861ms
+2024-06-11 13:51:35.2443|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:51:35.2443|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 347.4573ms
+2024-06-11 13:52:00.9052|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:52:00.9052|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:52:00.9052|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:52:00.9052|INFO|RepositoryLayer.Services.PaymentServiceRepo|Get Receipt Executed
+2024-06-11 13:52:00.9837|ERROR|RepositoryLayer.Services.PaymentServiceRepo|Error occured while Getting Receipt |System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowMultipleRows(Row row) in /_/Dapper/SqlMapper.cs:line 1246
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 498
+   at RepositoryLayer.Services.PaymentServiceRepo.getReceipt(Int32 PurchaseId, Int32 CustomerId) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\PaymentServiceRepo.cs:line 72
+2024-06-11 13:52:01.0668|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:52:01.0668|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 160.6694ms
+2024-06-11 13:52:01.0668|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:52:01.0668|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 162.0917ms
+2024-06-11 13:56:31.5054|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:56:31.5108|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:56:31.5108|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:56:31.5108|INFO|RepositoryLayer.Services.PaymentServiceRepo|Get Receipt Executed
+2024-06-11 13:56:31.6263|ERROR|RepositoryLayer.Services.PaymentServiceRepo|Error occured while Getting Receipt |System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowMultipleRows(Row row) in /_/Dapper/SqlMapper.cs:line 1246
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 498
+   at RepositoryLayer.Services.PaymentServiceRepo.getReceipt(Int32 PurchaseId, Int32 CustomerId) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\PaymentServiceRepo.cs:line 72
+2024-06-11 13:56:31.7427|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:56:31.7427|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 230.954ms
+2024-06-11 13:56:31.7427|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:56:31.7427|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 238.4086ms
+2024-06-11 13:56:38.3719|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:56:38.3774|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:56:38.3774|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:56:38.3774|INFO|RepositoryLayer.Services.PaymentServiceRepo|Get Receipt Executed
+2024-06-11 13:56:38.5899|ERROR|RepositoryLayer.Services.PaymentServiceRepo|Error occured while Getting Receipt |System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowMultipleRows(Row row) in /_/Dapper/SqlMapper.cs:line 1246
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 498
+   at RepositoryLayer.Services.PaymentServiceRepo.getReceipt(Int32 PurchaseId, Int32 CustomerId) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\PaymentServiceRepo.cs:line 72
+2024-06-11 13:56:38.6678|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:56:38.6678|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 289.7253ms
+2024-06-11 13:56:38.6678|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:56:38.6678|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 297.1829ms
+2024-06-11 13:57:31.1418|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 13:57:31.2728|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 131.4149ms
+2024-06-11 13:57:31.8381|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 13:57:31.8381|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 13:57:31.8381|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 10.4551ms
+2024-06-11 13:57:31.8863|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 47.8513ms
+2024-06-11 13:57:32.5980|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 13:57:32.6135|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 15.5246ms
+2024-06-11 13:57:53.5327|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - - -
+2024-06-11 13:57:53.5327|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:57:53.5661|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GenerateReceipt", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateReceipt(Int32) on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 13:57:53.5661|INFO|RepositoryLayer.Services.PaymentServiceRepo|Get Receipt Executed
+2024-06-11 13:57:53.7224|ERROR|RepositoryLayer.Services.PaymentServiceRepo|Error occured while Getting Receipt |System.InvalidOperationException: Sequence contains more than one element
+   at System.Linq.ThrowHelper.ThrowMoreThanOneElementException()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.ThrowMultipleRows(Row row) in /_/Dapper/SqlMapper.cs:line 1246
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 498
+   at RepositoryLayer.Services.PaymentServiceRepo.getReceipt(Int32 PurchaseId, Int32 CustomerId) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\PaymentServiceRepo.cs:line 72
+2024-06-11 13:57:53.8022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 13:57:53.8022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance) in 236.1038ms
+2024-06-11 13:57:53.8022|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.GenerateReceipt (E-Insurance)'
+2024-06-11 13:57:53.8022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getReceipt?PurchaseId=3 - 400 - text/plain;+charset=utf-8 270.0184ms
+2024-06-11 15:36:04.1818|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/admin - application/json 93
+2024-06-11 15:36:04.2720|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 15:36:04.3173|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:36:04.7257|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.String'.
+2024-06-11 15:36:04.7275|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 409.2809ms
+2024-06-11 15:36:04.7275|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 15:36:04.7275|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/admin - 200 - text/plain;+charset=utf-8 564.6895ms
+2024-06-11 15:37:28.9591|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/admin - application/json 105
+2024-06-11 15:37:28.9629|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 15:37:28.9629|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AdminRegistration", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdminRegistration(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:37:29.0090|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Admin Registration Executed
+2024-06-11 15:37:34.2545|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 15:37:34.4938|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance) in 5527.8723ms
+2024-06-11 15:37:34.4938|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AdminRegistration (E-Insurance)'
+2024-06-11 15:37:34.4938|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/admin - 201 - application/json;+charset=utf-8 5545.4867ms
+2024-06-11 15:38:56.4707|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 69
+2024-06-11 15:38:56.4707|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:38:56.4707|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:38:56.5975|ERROR|RepositoryLayer.Services.RegistrationServiceRepo|Error occured while Login |System.InvalidOperationException: BeginExecuteReader: CommandText property has not been initialized
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at RepositoryLayer.Services.RegistrationServiceRepo.Login(UserLoginRequest userLogin) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\RegistrationServiceRepo.cs:line 108
+2024-06-11 15:38:56.7206|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 15:38:56.7206|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 238.0751ms
+2024-06-11 15:38:56.7206|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:38:56.7206|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 400 - text/plain;+charset=utf-8 252.0776ms
+2024-06-11 15:39:23.3789|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/login - application/json 73
+2024-06-11 15:39:23.3789|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:39:23.3789|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:39:23.4201|ERROR|RepositoryLayer.Services.RegistrationServiceRepo|Error occured while Login |System.InvalidOperationException: BeginExecuteReader: CommandText property has not been initialized
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at RepositoryLayer.Services.RegistrationServiceRepo.Login(UserLoginRequest userLogin) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\RegistrationServiceRepo.cs:line 108
+2024-06-11 15:39:23.5194|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 15:39:23.5194|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 139.3693ms
+2024-06-11 15:39:23.5194|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:39:23.5194|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/login - 400 - text/plain;+charset=utf-8 142.0746ms
+2024-06-11 15:39:46.3181|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/login - application/json 82
+2024-06-11 15:39:46.3181|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:39:46.3271|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:39:46.4242|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 15:39:46.4426|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 15:39:46.4426|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 115.8064ms
+2024-06-11 15:39:46.4426|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 15:39:46.4426|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/login - 200 - application/json;+charset=utf-8 125.2111ms
+2024-06-11 15:41:13.5959|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/customers - application/json 93
+2024-06-11 15:41:13.7434|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 15:41:13.7434|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was forbidden.
+2024-06-11 15:41:13.7434|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/customers - 403 0 - 158.5861ms
+2024-06-11 15:42:25.0255|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/customers - application/json 108
+2024-06-11 15:42:25.0913|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token.|Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-11 15:42:25.0913|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-11 15:42:25.1049|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 15:42:25.1049|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2024-06-11 15:42:25.1049|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/customers - 401 0 - 94.0776ms
+2024-06-11 15:44:13.0508|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/customers - application/json 108
+2024-06-11 15:44:13.0681|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token.|Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-11 15:44:13.0681|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-11 15:44:13.0772|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 15:44:13.0772|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2024-06-11 15:44:13.0772|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/customers - 401 0 - 52.6937ms
+2024-06-11 15:44:46.2699|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/customers - application/json 108
+2024-06-11 15:44:46.3183|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:44:46.3628|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:44:46.4198|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-11 15:44:51.1701|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 15:44:51.1861|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 4823.0257ms
+2024-06-11 15:44:51.1861|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:44:51.1861|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/customers - 201 - application/json;+charset=utf-8 4919.7310ms
+2024-06-11 15:45:22.9963|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/customers - application/json 108
+2024-06-11 15:45:22.9963|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:45:22.9963|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:45:23.0086|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-11 15:45:23.2381|ERROR|RepositoryLayer.Services.RegistrationServiceRepo|Error occured while customer Registration |Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__Customer__7ED91ACE177D5608'. Cannot insert duplicate key in object 'dbo.Customers'. The duplicate key value is (aish@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at RepositoryLayer.Services.RegistrationServiceRepo.AddCustomer(UserEntity request) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\RegistrationServiceRepo.cs:line 89
+ClientConnectionId:af1503d9-5943-42bb-bc7b-91f41a7af57d
+Error Number:2627,State:1,Class:14
+2024-06-11 15:45:23.6073|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 15:45:23.6073|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 600.3206ms
+2024-06-11 15:45:23.6073|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:45:23.6073|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/customers - 400 - text/plain;+charset=utf-8 611.8482ms
+2024-06-11 15:52:00.4774|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/customers - application/json 108
+2024-06-11 15:52:00.5540|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:52:00.5559|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddCustomers", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddCustomers(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:52:00.5747|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Customer Registration Executed
+2024-06-11 15:52:00.8722|ERROR|RepositoryLayer.Services.RegistrationServiceRepo|Error occured while customer Registration |Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__Customer__7ED91ACE177D5608'. Cannot insert duplicate key in object 'dbo.Customers'. The duplicate key value is (aish@gmail.com).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at RepositoryLayer.Services.RegistrationServiceRepo.AddCustomer(UserEntity request) in C:\Users\dilee\source\repos\E-Insurance\RepositoryLayer\Services\RegistrationServiceRepo.cs:line 89
+ClientConnectionId:af1503d9-5943-42bb-bc7b-91f41a7af57d
+Error Number:2627,State:1,Class:14
+2024-06-11 15:52:01.0469|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 15:52:01.0469|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance) in 491.751ms
+2024-06-11 15:52:01.0469|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddCustomers (E-Insurance)'
+2024-06-11 15:52:01.0469|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/customers - 400 - text/plain;+charset=utf-8 580.5170ms
+2024-06-11 15:52:48.6184|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/employee - application/json 93
+2024-06-11 15:52:48.6184|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 15:52:48.6358|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was forbidden.
+2024-06-11 15:52:48.6358|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/employee - 403 0 - 19.2966ms
+2024-06-11 15:54:20.8689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/employee - - 0
+2024-06-11 15:54:20.8689|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 15:54:20.8689|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2024-06-11 15:54:20.8689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/employee - 401 0 - 9.0265ms
+2024-06-11 15:57:40.7619|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/employee - application/json 92
+2024-06-11 15:57:40.8050|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 15:57:40.8654|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddEmployee", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddEmployee(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 15:57:41.3285|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 15:57:41.3358|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance) in 469.1134ms
+2024-06-11 15:57:41.3358|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 15:57:41.3358|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/employee - 400 - text/plain;+charset=utf-8 580.3919ms
+2024-06-11 16:00:43.0528|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/employee - application/json 111
+2024-06-11 16:00:43.0685|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 16:00:43.0685|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddEmployee", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddEmployee(ModelLayer.RequestDTO.Registration.UserRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:00:43.1762|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Employee Registration Executed
+2024-06-11 16:00:47.8308|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:00:47.8553|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance) in 4785.9505ms
+2024-06-11 16:00:47.8553|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddEmployee (E-Insurance)'
+2024-06-11 16:00:47.8553|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/employee - 201 - application/json;+charset=utf-8 4804.1444ms
+2024-06-11 16:02:34.1958|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/agent - application/json 117
+2024-06-11 16:02:34.2048|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 16:02:34.2048|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was forbidden.
+2024-06-11 16:02:34.2456|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/agent - 403 0 - 14.1406ms
+2024-06-11 16:07:59.8078|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 16:08:00.6529|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 16:08:00.6529|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 16:08:00.7246|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 16:08:00.7246|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 16:08:00.7246|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 16:08:01.8657|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 16:08:02.5783|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 723.1750ms
+2024-06-11 16:08:02.6430|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 16:08:02.6430|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 16:08:02.6742|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 34.5512ms
+2024-06-11 16:08:02.7206|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 78.6905ms
+2024-06-11 16:08:02.9521|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 16:08:03.0799|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 129.2514ms
+2024-06-11 16:14:19.4987|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/agent - application/json 133
+2024-06-11 16:14:20.3902|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token.|Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-11 16:14:20.4131|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-11 16:14:20.4535|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-06-11 16:14:20.4535|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2024-06-11 16:14:20.4535|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/agent - 401 0 - 980.9143ms
+2024-06-11 16:15:36.8291|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 78
+2024-06-11 16:15:36.8475|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token.|Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-11 16:15:36.8475|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-11 16:15:36.8547|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:15:37.1181|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:15:39.0799|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 16:15:39.3954|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 16:15:39.4045|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 2279.9286ms
+2024-06-11 16:15:39.4045|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:15:39.4045|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 400 - text/plain;+charset=utf-8 2579.7062ms
+2024-06-11 16:15:47.7667|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 78
+2024-06-11 16:15:47.7667|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token.|Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-11 16:15:47.7667|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-11 16:15:47.7667|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:15:47.7667|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:15:47.9032|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 16:15:47.9568|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-06-11 16:15:47.9568|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 187.8532ms
+2024-06-11 16:15:47.9568|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:15:47.9568|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 400 - text/plain;+charset=utf-8 190.7476ms
+2024-06-11 16:20:13.6211|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\dilee\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-11 16:20:14.1094|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7062
+2024-06-11 16:20:14.1094|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5095
+2024-06-11 16:20:14.1781|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-06-11 16:20:14.1781|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-06-11 16:20:14.1781|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\dilee\source\repos\E-Insurance\E-Insurance
+2024-06-11 16:20:15.0921|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - - -
+2024-06-11 16:20:15.5679|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 - text/html;charset=utf-8 481.3843ms
+2024-06-11 16:20:15.5773|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - - -
+2024-06-11 16:20:15.5773|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - - -
+2024-06-11 16:20:15.5897|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript;+charset=utf-8 10.6110ms
+2024-06-11 16:20:15.6470|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 69.7651ms
+2024-06-11 16:20:15.6967|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - - -
+2024-06-11 16:20:15.8095|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 112.9200ms
+2024-06-11 16:20:48.1817|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/registration/login - application/json 78
+2024-06-11 16:20:48.1945|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:20:48.2294|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:20:49.6149|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 16:20:49.8584|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:20:49.8584|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 1630.8915ms
+2024-06-11 16:20:49.8584|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:20:49.8667|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/registration/login - 200 - application/json;+charset=utf-8 1684.4836ms
+2024-06-11 16:21:06.9723|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/agent - application/json 139
+2024-06-11 16:21:07.0622|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.AddAgent (E-Insurance)'
+2024-06-11 16:21:07.0622|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddAgent", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAgent(ModelLayer.RequestDTO.Registration.AgentRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:21:07.0809|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Agent Registration Executed
+2024-06-11 16:21:11.5530|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:21:11.5825|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.AddAgent (E-Insurance) in 4515.6292ms
+2024-06-11 16:21:11.5825|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.AddAgent (E-Insurance)'
+2024-06-11 16:21:11.5825|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/agent - 201 - application/json;+charset=utf-8 4610.6587ms
+2024-06-11 16:31:46.7103|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 POST https://localhost:7062/api/policies/createPolicy - application/json 195
+2024-06-11 16:31:46.7876|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Employee|Agent)
+2024-06-11 16:31:46.7876|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2024-06-11 16:31:46.7876|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 POST https://localhost:7062/api/policies/createPolicy - 401 0 - 95.5758ms
+2024-06-11 16:33:18.4932|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/registration/login - application/json 87
+2024-06-11 16:33:18.5660|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:33:18.6061|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "registration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ModelLayer.RequestDTO.Registration.UserLoginRequest) on controller E_Insurance.Controllers.registrationController (E-Insurance).
+2024-06-11 16:33:18.8477|INFO|RepositoryLayer.Services.RegistrationServiceRepo|Login API Executed
+2024-06-11 16:33:18.8655|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:33:18.8724|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.registrationController.Login (E-Insurance) in 265.688ms
+2024-06-11 16:33:18.8724|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.registrationController.Login (E-Insurance)'
+2024-06-11 16:33:18.8724|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/registration/login - 200 - application/json;+charset=utf-8 380.9114ms
+2024-06-11 16:39:58.3926|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7062/api/policies/createPolicy - application/json 233
+2024-06-11 16:39:58.4957|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.policiesController.AddPolicy (E-Insurance)'
+2024-06-11 16:39:58.6009|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "AddPolicy", controller = "policies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPolicy(ModelLayer.RequestDTO.PolicyModels.PolicyRequest) on controller E_Insurance.Controllers.policiesController (E-Insurance).
+2024-06-11 16:39:58.7702|INFO|RepositoryLayer.Services.PolicyServiceRepo|Policy Insertion Executed
+2024-06-11 16:39:59.2232|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:39:59.2573|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.policiesController.AddPolicy (E-Insurance) in 653.0191ms
+2024-06-11 16:39:59.2573|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.policiesController.AddPolicy (E-Insurance)'
+2024-06-11 16:39:59.2573|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7062/api/policies/createPolicy - 201 - application/json;+charset=utf-8 878.6409ms
+2024-06-11 16:41:10.6224|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/policies/allPolicies - - -
+2024-06-11 16:41:10.6224|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance)'
+2024-06-11 16:41:10.6462|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "getAllPolicies", controller = "policies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getAllPolicies() on controller E_Insurance.Controllers.policiesController (E-Insurance).
+2024-06-11 16:41:10.6462|INFO|RepositoryLayer.Services.PolicyServiceRepo|GetAllPolicies Executed
+2024-06-11 16:41:10.7383|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Collections.Generic.IEnumerable`1[[ModelLayer.Entities.PolicyEntity, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:41:10.7649|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance) in 118.5007ms
+2024-06-11 16:41:10.7649|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance)'
+2024-06-11 16:41:10.7649|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/policies/allPolicies - 200 - application/json;+charset=utf-8 142.9645ms
+2024-06-11 16:41:35.8031|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7062/api/policies/allPolicies - - -
+2024-06-11 16:41:35.8031|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance)'
+2024-06-11 16:41:35.8031|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "getAllPolicies", controller = "policies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getAllPolicies() on controller E_Insurance.Controllers.policiesController (E-Insurance).
+2024-06-11 16:41:35.8088|INFO|RepositoryLayer.Services.PolicyServiceRepo|GetAllPolicies Executed
+2024-06-11 16:41:35.8209|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'ModelLayer.ResponseDTO.ResponseModel`1[[System.Collections.Generic.IEnumerable`1[[ModelLayer.Entities.PolicyEntity, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-11 16:41:35.8209|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance) in 18.3173ms
+2024-06-11 16:41:35.8209|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.policiesController.getAllPolicies (E-Insurance)'
+2024-06-11 16:41:35.8209|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7062/api/policies/allPolicies - 200 - application/json;+charset=utf-8 20.9305ms
+2024-06-11 16:48:20.7227|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7062/api/payment/getPayment - - -
+2024-06-11 16:48:20.7227|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'E_Insurance.Controllers.paymentController.ViewPayment (E-Insurance)'
+2024-06-11 16:48:20.7410|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "ViewPayment", controller = "payment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewPayment() on controller E_Insurance.Controllers.paymentController (E-Insurance).
+2024-06-11 16:48:21.1046|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action E_Insurance.Controllers.paymentController.ViewPayment (E-Insurance) in 363.398ms
+2024-06-11 16:48:21.1046|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'E_Insurance.Controllers.paymentController.ViewPayment (E-Insurance)'
+2024-06-11 16:48:21.1282|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.|System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.Int32.Parse(String s)
+   at E_Insurance.Controllers.paymentController.ViewPayment() in C:\Users\dilee\source\repos\E-Insurance\E-Insurance\Controllers\paymentController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-11 16:48:21.4172|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7062/api/payment/getPayment - 500 - text/plain;+charset=utf-8 694.8457ms

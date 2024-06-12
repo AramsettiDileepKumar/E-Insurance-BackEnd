@@ -25,9 +25,9 @@ namespace BusinessLogicLayer.Services
         {
             return await paymentRepo.getPayments(CustomerId);
         }
-        public async Task<PaymentEntity> getReceipt(int PolicyId, int CustomerId)
+        public async Task<PaymentEntity> getReceipt(int PurchaseId, int CustomerId)
         {
-            return await paymentRepo.getReceipt(PolicyId,CustomerId);
+            return await paymentRepo.getReceipt(PurchaseId,CustomerId);
         }
     }
 }

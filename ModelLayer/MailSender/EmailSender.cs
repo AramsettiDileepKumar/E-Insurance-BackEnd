@@ -14,15 +14,15 @@ namespace ModelLayer.MailSender
         public static void sendMail(string Email,string password)
         {
             Console.WriteLine(Email);
-            MailMessage mailMessage = new MailMessage("dileep20721@outlook.com", Email);
+            MailMessage mailMessage = new MailMessage("dileep20721@gmail.com", Email);
             try
             {
                 mailMessage.Subject = "E-Insurance";
                 mailMessage.Body = "You are Successfully Registered to E-Insurance Application, Here is Your login credentials."+"Email: "+Email+" Password: "+password;
                 mailMessage.IsBodyHtml = true;
-                SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com", 587);
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.EnableSsl = true;
-                NetworkCredential networkCredential = new NetworkCredential("dileep20721@outlook.com", "ammadeepu@123");
+                NetworkCredential networkCredential = new NetworkCredential("dileep20721@gmail.com", "xhnl jmov dabw iewq");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Send(mailMessage);
