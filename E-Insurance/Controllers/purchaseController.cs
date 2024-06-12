@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Entities;
@@ -18,6 +19,7 @@ namespace E_Insurance.Controllers
         {
             this.purchase = purchase;
         }
+        [Authorize(Roles ="Customer")]
         [HttpPost("customerDetails")]
         public async Task<IActionResult> CustomerDetails(CustomerDetailsRequest request)
         {
@@ -36,6 +38,7 @@ namespace E_Insurance.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [Authorize(Roles = "Customer")]
         [HttpGet]
         public async Task<IActionResult> ViewPolicies()
         {
@@ -54,8 +57,7 @@ namespace E_Insurance.Controllers
                 return BadRequest(ex.Message);  
             }
         }
-       
-       
+        [Authorize(Roles = "Customer")]
         [HttpPost("purchasePolicy")]
         public async Task<IActionResult> PolicyPurchase(purchaseRequest request)
         {
@@ -74,6 +76,7 @@ namespace E_Insurance.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [Authorize(Roles = "Customer")]
         [HttpPut("cancelPolicy")]
         public async Task<IActionResult> PolicyCancellation(int policyId)
         {

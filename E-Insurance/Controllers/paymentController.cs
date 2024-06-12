@@ -44,12 +44,12 @@ namespace E_Insurance.Controllers
             return Ok(new ResponseModel<string> { Success = false, Message = "Error Occued While Fetching Payment", Data = null });
         }
         [HttpGet("getReceipt")]
-        public async Task<IActionResult> GenerateReceipt(int PolicyId)
+        public async Task<IActionResult> GenerateReceipt(int PurchaseId)
         {
             try
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-                var result = await payment.getReceipt(PolicyId, CustomerId);
+                var result = await payment.getReceipt(PurchaseId, CustomerId);
                 if (result != null)
                 {
                     return Ok(new ResponseModel<PaymentEntity> { Success = true, Message = "Receipt Generated Successfully", Data =result });
