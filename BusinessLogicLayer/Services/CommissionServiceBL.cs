@@ -28,5 +28,9 @@ namespace BusinessLogicLayer.Services
         {
             return await repo.getCommission(AgentId);
         }
+        public async Task<int> CommissionPayment(int AgentId)
+        {
+            return await repo.CommissionPayment(AgentId);
+        }
     }
 }

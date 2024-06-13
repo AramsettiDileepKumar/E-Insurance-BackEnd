@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Entities;
 using ModelLayer.ResponseDTO;
 using System.Security.Claims;
+using static MassTransit.ValidationResultExtensions;
 
 namespace E_Insurance.Controllers
 {
@@ -65,6 +66,23 @@ namespace E_Insurance.Controllers
                 }
                 return Ok(new ResponseModel<IEnumerable<CommissionDetails>> { Success = false, Message = "Error Occured While Fetching Commission", Data =null });
             }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> CommissionPayment(int AgentId)
+        {
+            try
+            {
+                var result=await commissionBL.CommissionPayment(AgentId);
+                if (result != 0) {
+                    return Ok(new ResponseModel<int> { Success = true, Message = "Commission Fetched Successfully", Data = result });
+                }
+                return Ok(new ResponseModel<string> { Success = false, Message = "Error Occured While Commission Payment", Data =null });
+            }
+
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
