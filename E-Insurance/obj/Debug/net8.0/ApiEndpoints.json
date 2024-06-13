@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "E_Insurance.Controllers.commissionController",
+    "Method": "CommissionPayment",
+    "RelativePath": "api/commission",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.commissionController",
     "Method": "AddCommisionRate",
     "RelativePath": "api/commission/addCommisionRate",
     "HttpMethod": "POST",

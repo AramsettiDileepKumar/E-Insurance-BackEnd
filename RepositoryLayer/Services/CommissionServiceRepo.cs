@@ -47,7 +47,7 @@ namespace RepositoryLayer.Services
                 using (var connection = context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("PolicyPurchaseId", PurchaseId);
+                    parameters.Add("PurchaseId", PurchaseId);
                     _logger.Info("Calculate Commission Executed");
                     return await connection.ExecuteAsync("SP_CalculateCommission", parameters) > 0;
                 }
@@ -74,6 +74,24 @@ namespace RepositoryLayer.Services
             {
                 _logger.Error(ex, "Error occurred while Fetching Commission");
                 throw new Exception(ex.Message);
+            }
+        }
+        public async Task<int> CommissionPayment(int AgentId)
+        {
+            try
+            {
+                using(var connection = context.CreateConnection())
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("AgentId", AgentId);
+                    _logger.Info("Commission Payment For Agent is Executed");
+                    return await connection.ExecuteAsync("SP_PayAgentCommission", parameters);
+                }
+            }
+            catch(Exception ex) 
+            {
+                _logger.Error(ex, "Error occurred while Commission Payment");
+                throw new Exception(ex.Message);    
             }
         }
     }

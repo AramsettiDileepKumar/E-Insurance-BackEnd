@@ -12,5 +12,6 @@ namespace BusinessLogicLayer.Interfaces
         Task<int> AddCommissionRate(CommissionRates commissionRate);
         Task<bool> CalculateCommission(int PurchaseId);
         Task<IEnumerable<CommissionDetails>> getCommission(int AgentId);
+        Task<int> CommissionPayment(int AgentId);
     }
 }

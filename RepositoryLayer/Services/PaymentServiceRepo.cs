@@ -31,7 +31,7 @@ namespace RepositoryLayer.Services
                     parameters.Add("PaymentMethod", paymentRequest.PaymentMethod);
                     parameters.Add("PurchaseId", paymentRequest.PurchaseId);
                     parameters.Add("PaymentDate", DateTime.Now);
-                    parameters.Add("Id", CustomerId);
+                    parameters.Add("CustomerId", CustomerId);
                     parameters.Add("PaymentId", dbType: DbType.Int32, direction: ParameterDirection.Output);
                     _logger.Info("Add payment Executed");
                     await connection.ExecuteAsync("SP_InsertPayment", parameters, commandType: CommandType.StoredProcedure);
