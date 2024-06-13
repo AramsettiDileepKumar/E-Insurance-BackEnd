@@ -26,7 +26,7 @@ namespace E_Insurance.Controllers
                 var result= await payment.AddPayment(request,CustomerId);
                 if (result != 0)
                 {
-                    return CreatedAtAction(nameof(Addpayment),new ResponseModel<string> { Success=true,Message="Payment Added Successfully",Data=null});
+                    return CreatedAtAction(nameof(Addpayment),new ResponseModel<int> { Success=true,Message="Payment Added Successfully",Data=result});
                 }
                 return Ok(new ResponseModel<string> { Success =false, Message = "Error Occured While Adding Payment"});
             }
@@ -44,12 +44,12 @@ namespace E_Insurance.Controllers
             return Ok(new ResponseModel<string> { Success = false, Message = "Error Occued While Fetching Payment", Data = null });
         }
         [HttpGet("getReceipt")]
-        public async Task<IActionResult> GenerateReceipt(int PurchaseId)
+        public async Task<IActionResult> GenerateReceipt(int PaymentId)
         {
             try
             {
                 var CustomerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-                var result = await payment.getReceipt(PurchaseId, CustomerId);
+                var result = await payment.getReceipt(PaymentId, CustomerId);
                 if (result != null)
                 {
                     return Ok(new ResponseModel<PaymentEntity> { Success = true, Message = "Receipt Generated Successfully", Data =result });

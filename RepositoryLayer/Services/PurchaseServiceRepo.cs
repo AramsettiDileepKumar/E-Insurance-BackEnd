@@ -132,5 +132,26 @@ namespace RepositoryLayer.Services
                 throw ex;
             }
         }
+        public async Task<IEnumerable<UserEntity>> allAgents()
+        {
+            try
+            {
+                using(var Connection= context.CreateConnection())
+                {
+                    _logger.Info("get all Agents executed");
+                    return await Connection.QueryAsync<UserEntity>("SP_getAllAgents");
+                }
+            }
+            catch(SqlException ex)
+            {
+                _logger.Error("SQL Error occurred while Fetching All Agents"+ ex.Message);
+                throw new Exception(ex.Message);
+            }
+            catch(Exception ex) 
+            {
+                _logger.Error("Error occurred while Fetching All Agents" + ex.Message);
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
