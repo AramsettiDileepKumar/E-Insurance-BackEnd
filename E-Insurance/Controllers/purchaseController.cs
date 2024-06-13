@@ -29,7 +29,7 @@ namespace E_Insurance.Controllers
                 var result = await purchase.CustomerDetails(request,CustomerId);
                 if (result)
                 {
-                    return CreatedAtAction(nameof(CustomerDetails), new ResponseModel<string> { Success = true, Message = "Policy Purchased Successfully", Data = null });
+                    return CreatedAtAction(nameof(CustomerDetails), new ResponseModel<string> { Success = true, Message = "Customer Details Added Successfully", Data = null });
                 }
                 return Ok(new ResponseModel<bool> { Success = false, Message = "Error Occured While Purchasing Policy" });
             }
@@ -112,6 +112,16 @@ namespace E_Insurance.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+        [HttpGet("allAgents")]
+        public async Task<IActionResult> allAgents()
+        {
+            var result = await purchase.allAgents();
+            if(result != null)
+            {
+                return Ok(new ResponseModel<IEnumerable<UserEntity>> { Success = true, Message = "All Agents Data Fetched Successfully ", Data = result });
+            }
+            return Ok(new ResponseModel<IEnumerable<UserEntity>> { Success = false, Message = "Error Occured While fetching Agents", Data = result });
         }
     }
 }

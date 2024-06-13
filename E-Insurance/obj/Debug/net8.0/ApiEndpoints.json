@@ -76,7 +76,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "PurchaseId",
+        "Name": "PaymentId",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -145,6 +145,16 @@
     "ContainingType": "E_Insurance.Controllers.purchaseController",
     "Method": "ViewPolicies",
     "RelativePath": "api/purchase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Insurance.Controllers.purchaseController",
+    "Method": "allAgents",
+    "RelativePath": "api/purchase/allAgents",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

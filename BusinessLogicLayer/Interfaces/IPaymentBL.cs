@@ -12,6 +12,6 @@ namespace BusinessLogicLayer.Interfaces
     {
         Task<int> AddPayment(PaymentRequest paymentRequest,int CustomerId);
         Task<IEnumerable<PaymentEntity>> getPayments(int CustomerId);
-        Task<PaymentEntity> getReceipt(int PurchaseId,int CustomerId);
+        Task<PaymentEntity> getReceipt(int PaymentId, int CustomerId);
     }
 }

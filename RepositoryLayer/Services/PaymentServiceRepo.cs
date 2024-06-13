@@ -6,6 +6,7 @@ using RepositoryLayer.Context;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,23 +25,27 @@ namespace RepositoryLayer.Services
         {
             try
             {
-                using(var connection=context.CreateConnection())
+                using (var connection = context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
                     parameters.Add("PaymentMethod", paymentRequest.PaymentMethod);
                     parameters.Add("PurchaseId", paymentRequest.PurchaseId);
-                    parameters.Add("PaymentDate",DateTime.Now);
-                    parameters.Add("Id",CustomerId);
+                    parameters.Add("PaymentDate", DateTime.Now);
+                    parameters.Add("Id", CustomerId);
+                    parameters.Add("PaymentId", dbType: DbType.Int32, direction: ParameterDirection.Output);
                     _logger.Info("Add payment Executed");
-                    return await connection.ExecuteAsync("SP_InsertPayment", parameters);
+                    await connection.ExecuteAsync("SP_InsertPayment", parameters, commandType: CommandType.StoredProcedure);
+                    int paymentId = parameters.Get<int>("PaymentId");
+                    return paymentId;
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                _logger.Error(ex, "Error occured while Adding Payment ");
-                throw new Exception(ex.Message); 
+                _logger.Error(ex, "Error occurred while Adding Payment");
+                throw new Exception(ex.Message);
             }
         }
+
         public async Task<IEnumerable<PaymentEntity>> getPayments(int CustomerId)
         {
             try
@@ -59,14 +64,14 @@ namespace RepositoryLayer.Services
                 throw new Exception(ex.Message); 
             }
         }
-        public async Task<PaymentEntity> getReceipt(int PurchaseId, int CustomerId)
+        public async Task<PaymentEntity> getReceipt(int PaymentId, int CustomerId)
         {
             try
             {
                 using( var connection=context.CreateConnection())
                 {
                     var parameters = new DynamicParameters();
-                    parameters.Add("PurchaseId", PurchaseId);
+                    parameters.Add("PaymentId", PaymentId);
                     parameters.Add("CustomerId", CustomerId);
                     _logger.Info("Get Receipt Executed");
                     return await connection.QuerySingleAsync<PaymentEntity>("SP_getPolicyPayment", parameters);

@@ -18,5 +18,6 @@ namespace BusinessLogicLayer.Interfaces
         Task<int> PolicyCancellation(int CustomerId, int PolicyId);
         
         Task<IEnumerable<PolicyPurchaseEntity>> AgentPolicies(int AgentId);
+        Task<IEnumerable<UserEntity>> allAgents();
     }
 }

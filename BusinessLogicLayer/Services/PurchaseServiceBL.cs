@@ -55,5 +55,9 @@ namespace BusinessLogicLayer.Services
             }
             catch (Exception ex) { throw new Exception(ex.Message); }
         }
+        public async Task<IEnumerable<UserEntity>> allAgents()
+        {
+            return await purchase.allAgents();
+        }
     }
 }
